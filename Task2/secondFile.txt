@@ -1,3 +1,10 @@
 second commit in dev branch
+<<<<<<< HEAD
 
 *optional change master
+=======
+*optional change master
+*optional first commit in dev branch
+
+*secondoptional second commit
+>>>>>>> 82f84fa... Edit secondFile in Task2
