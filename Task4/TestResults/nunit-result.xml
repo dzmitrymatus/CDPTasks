@@ -1,0 +1,966 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="251" result="Failed" total="251" passed="183" failed="68" inconclusive="0" skipped="0" asserts="203" engine-version="3.2.0.0" clr-version="4.0.30319.42000" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:52Z" duration="2.346825">
+  <command-line><![CDATA["C:\Program Files (x86)\NUnit.org\nunit-console\nunit3-console.exe"  D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\NUnitTests.dll /result=D:\GitHub\CDPTasks\Task4\TestResults\nunit-result.xml]]></command-line>
+  <test-suite type="Assembly" id="0-1308" name="NUnitTests.dll" fullname="D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\NUnitTests.dll" runstate="Runnable" testcasecount="251" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:51Z" duration="1.072409" total="251" passed="183" failed="68" inconclusive="0" skipped="0" asserts="203">
+    <environment framework-version="3.4.1.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.10586.0" platform="Win32NT" cwd="D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug" machine-name="EPBYBREW0195" user="Dzmitry_Matus" user-domain="MINSK" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="WorkDirectory" value="C:\Users\Dzmitry_Matus" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="4" />
+    </settings>
+    <properties>
+      <property name="_PID" value="10804" />
+      <property name="_APPDOMAIN" value="test-domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1309" name="NUnitTests" fullname="NUnitTests" runstate="Runnable" testcasecount="251" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:51Z" duration="1.054933" total="251" passed="183" failed="68" inconclusive="0" skipped="0" asserts="203">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="SetUpFixture" id="0-1307" name="Infrastructure" fullname="NUnitTests.Infrastructure.TestsSetUp" classname="NUnitTests.Infrastructure.TestsSetUp" runstate="Runnable" testcasecount="0" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.001631" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" />
+      <test-suite type="TestSuite" id="0-1310" name="Tests" fullname="NUnitTests.Tests" runstate="Runnable" testcasecount="251" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:51Z" duration="1.050933" total="251" passed="183" failed="68" inconclusive="0" skipped="0" asserts="203">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestFixture" id="0-1000" name="AbsTests" fullname="NUnitTests.Tests.AbsTests" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" testcasecount="31" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.161391" total="31" passed="18" failed="13" inconclusive="0" skipped="0" asserts="23">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="ParameterizedMethod" id="0-1036" name="TestForBadStringValues" fullname="NUnitTests.Tests.AbsTests.TestForBadStringValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.024009" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3">
+            <test-case id="0-1033" name="TestForBadStringValues(&quot; &quot;)" fullname="NUnitTests.Tests.AbsTests.TestForBadStringValues(&quot; &quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1684688845" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.012377" asserts="1" />
+            <test-case id="0-1034" name="TestForBadStringValues(&quot;string&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForBadStringValues(&quot;string&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="578887440" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000202" asserts="1" />
+            <test-case id="0-1035" name="TestForBadStringValues(&quot;0,55&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForBadStringValues(&quot;0,55&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="174327778" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000124" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1023" name="TestForDoubleValues" fullname="NUnitTests.Tests.AbsTests.TestForDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.052509" total="8" passed="3" failed="5" inconclusive="0" skipped="0" asserts="8">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1015" name="TestForDoubleValues(4.0d)" fullname="NUnitTests.Tests.AbsTests.TestForDoubleValues(4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1365336767" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.008269" asserts="1" />
+            <test-case id="0-1016" name="TestForDoubleValues(5.5d)" fullname="NUnitTests.Tests.AbsTests.TestForDoubleValues(5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1359436833" result="Failed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.016133" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be 5.5, but was 6. Input value: 5.5.
+  Expected: 5.5d
+  But was:  6.0d
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1017" name="TestForDoubleValues(5.23d)" fullname="NUnitTests.Tests.AbsTests.TestForDoubleValues(5.23d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="2026274901" result="Failed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000521" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be 5.23, but was 5. Input value: 5.23.
+  Expected: 5.2300000000000004d
+  But was:  5.0d
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1018" name="TestForDoubleValues(0.0d)" fullname="NUnitTests.Tests.AbsTests.TestForDoubleValues(0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="2072049991" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000052" asserts="1" />
+            <test-case id="0-1019" name="TestForDoubleValues(-4.0d)" fullname="NUnitTests.Tests.AbsTests.TestForDoubleValues(-4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1117708606" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000047" asserts="1" />
+            <test-case id="0-1020" name="TestForDoubleValues(-5.34d)" fullname="NUnitTests.Tests.AbsTests.TestForDoubleValues(-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1816481082" result="Failed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000552" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be 5.34, but was 5. Input value: -5.34.
+  Expected: 5.3399999999999999d
+  But was:  5.0d
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1021" name="TestForDoubleValues(-4.1d)" fullname="NUnitTests.Tests.AbsTests.TestForDoubleValues(-4.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1398750408" result="Failed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000546" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be 4.1, but was 4. Input value: -4.1.
+  Expected: 4.0999999999999996d
+  But was:  4.0d
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1022" name="TestForDoubleValues(5.1d)" fullname="NUnitTests.Tests.AbsTests.TestForDoubleValues(5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1432861307" result="Failed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000411" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be 5.1, but was 5. Input value: 5.1.
+  Expected: 5.0999999999999996d
+  But was:  5.0d
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34
+]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1007" name="TestForIntValues" fullname="NUnitTests.Tests.AbsTests.TestForIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.018987" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1001" name="TestForIntValues(4)" fullname="NUnitTests.Tests.AbsTests.TestForIntValues(4)" methodname="TestForIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="6289797" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000856" asserts="1" />
+            <test-case id="0-1002" name="TestForIntValues(5)" fullname="NUnitTests.Tests.AbsTests.TestForIntValues(5)" methodname="TestForIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="2021534416" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000061" asserts="1" />
+            <test-case id="0-1003" name="TestForIntValues(0)" fullname="NUnitTests.Tests.AbsTests.TestForIntValues(0)" methodname="TestForIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="518783395" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000062" asserts="1" />
+            <test-case id="0-1004" name="TestForIntValues(-4)" fullname="NUnitTests.Tests.AbsTests.TestForIntValues(-4)" methodname="TestForIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1314697031" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000050" asserts="1" />
+            <test-case id="0-1005" name="TestForIntValues(-5)" fullname="NUnitTests.Tests.AbsTests.TestForIntValues(-5)" methodname="TestForIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="355478098" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000043" asserts="1" />
+            <test-case id="0-1006" name="TestForIntValues(int.MaxValue)" fullname="NUnitTests.Tests.AbsTests.TestForIntValues(int.MaxValue)" methodname="TestForIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="332533034" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000053" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1032" name="TestForStringDoubleValues" fullname="NUnitTests.Tests.AbsTests.TestForStringDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.030844" total="8" passed="0" failed="8" inconclusive="0" skipped="0" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1024" name="TestForStringDoubleValues(&quot;4.0&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringDoubleValues(&quot;4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1095480276" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.003521" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Abs(Object a)
+   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1025" name="TestForStringDoubleValues(&quot;5.5&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringDoubleValues(&quot;5.5&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="850627862" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.002767" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Abs(Object a)
+   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1026" name="TestForStringDoubleValues(&quot;5.23&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringDoubleValues(&quot;5.23&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="993554989" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000519" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Abs(Object a)
+   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1027" name="TestForStringDoubleValues(&quot;0.0&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringDoubleValues(&quot;0.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="413123121" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000399" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Abs(Object a)
+   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1028" name="TestForStringDoubleValues(&quot;-4.0&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringDoubleValues(&quot;-4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1762690117" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000350" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Abs(Object a)
+   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1029" name="TestForStringDoubleValues(&quot;-5.34&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringDoubleValues(&quot;-5.34&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="2000042075" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000409" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Abs(Object a)
+   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1030" name="TestForStringDoubleValues(&quot;-4.1&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringDoubleValues(&quot;-4.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="483604292" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000467" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Abs(Object a)
+   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1031" name="TestForStringDoubleValues(&quot;5.1&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringDoubleValues(&quot;5.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="712100813" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000415" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Abs(Object a)
+   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1014" name="TestForStringIntValues" fullname="NUnitTests.Tests.AbsTests.TestForStringIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.018579" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1008" name="TestForStringIntValues(&quot;4&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringIntValues(&quot;4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1073039558" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000360" asserts="1" />
+            <test-case id="0-1009" name="TestForStringIntValues(&quot;5&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringIntValues(&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="514801198" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000045" asserts="1" />
+            <test-case id="0-1010" name="TestForStringIntValues(&quot;0&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringIntValues(&quot;0&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="474581781" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000050" asserts="1" />
+            <test-case id="0-1011" name="TestForStringIntValues(&quot;-4&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringIntValues(&quot;-4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1447326820" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000047" asserts="1" />
+            <test-case id="0-1012" name="TestForStringIntValues(&quot;-5&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringIntValues(&quot;-5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="110901056" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000048" asserts="1" />
+            <test-case id="0-1013" name="TestForStringIntValues(&quot;2147483647&quot;)" fullname="NUnitTests.Tests.AbsTests.TestForStringIntValues(&quot;2147483647&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AbsTests" runstate="Runnable" seed="1956065356" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000063" asserts="1" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1037" name="AddTests" fullname="NUnitTests.Tests.AddTests" classname="NUnitTests.Tests.AddTests" runstate="Runnable" testcasecount="21" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.099084" total="21" passed="4" failed="17" inconclusive="0" skipped="0" asserts="7">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="ParameterizedMethod" id="0-1063" name="TestForBadStringValues" fullname="NUnitTests.Tests.AddTests.TestForBadStringValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.024514" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="3">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1060" name="TestForBadStringValues(&quot; &quot;,&quot; &quot;)" fullname="NUnitTests.Tests.AddTests.TestForBadStringValues(&quot; &quot;,&quot; &quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1343574669" result="Failed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.015167" asserts="1">
+              <failure>
+                <message><![CDATA[  Add method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.InvalidCastException>
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.AddTests.TestForBadStringValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 51
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1061" name="TestForBadStringValues(&quot;string&quot;,&quot;onemorestring&quot;)" fullname="NUnitTests.Tests.AddTests.TestForBadStringValues(&quot;string&quot;,&quot;onemorestring&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1187496203" result="Failed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000431" asserts="1">
+              <failure>
+                <message><![CDATA[  Add method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.InvalidCastException>
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.AddTests.TestForBadStringValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 51
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1062" name="TestForBadStringValues(&quot;0,55&quot;,&quot;5t&quot;)" fullname="NUnitTests.Tests.AddTests.TestForBadStringValues(&quot;0,55&quot;,&quot;5t&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="229892037" result="Failed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000505" asserts="1">
+              <failure>
+                <message><![CDATA[  Add method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.InvalidCastException>
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.AddTests.TestForBadStringValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 51
+]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1054" name="TestForDoubleValues" fullname="NUnitTests.Tests.AddTests.TestForDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.016027" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+            <test-case id="0-1050" name="TestForDoubleValues(4.0d,5.5d)" fullname="NUnitTests.Tests.AddTests.TestForDoubleValues(4.0d,5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="211758361" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000473" asserts="1" />
+            <test-case id="0-1051" name="TestForDoubleValues(5.23d,0.0d)" fullname="NUnitTests.Tests.AddTests.TestForDoubleValues(5.23d,0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1080362207" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000046" asserts="1" />
+            <test-case id="0-1052" name="TestForDoubleValues(-4.0d,-5.34d)" fullname="NUnitTests.Tests.AddTests.TestForDoubleValues(-4.0d,-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1148181674" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000064" asserts="1" />
+            <test-case id="0-1053" name="TestForDoubleValues(-4.1d,5.1d)" fullname="NUnitTests.Tests.AddTests.TestForDoubleValues(-4.1d,5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1609263849" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000047" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1043" name="TestForIntValues" fullname="NUnitTests.Tests.AddTests.TestForIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.015521" total="5" passed="0" failed="5" inconclusive="0" skipped="0" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1038" name="TestForIntValues(4,5)" fullname="NUnitTests.Tests.AddTests.TestForIntValues(4,5)" methodname="TestForIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1675748387" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000931" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1039" name="TestForIntValues(0,5)" fullname="NUnitTests.Tests.AddTests.TestForIntValues(0,5)" methodname="TestForIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="722175903" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000337" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1040" name="TestForIntValues(-4,-5)" fullname="NUnitTests.Tests.AddTests.TestForIntValues(-4,-5)" methodname="TestForIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="413967272" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000398" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1041" name="TestForIntValues(-4,5)" fullname="NUnitTests.Tests.AddTests.TestForIntValues(-4,5)" methodname="TestForIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1865099328" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000400" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1042" name="TestForIntValues(int.MaxValue,int.MaxValue)" fullname="NUnitTests.Tests.AddTests.TestForIntValues(int.MaxValue,int.MaxValue)" methodname="TestForIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1079252841" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000366" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1059" name="TestForStringDoubleValues" fullname="NUnitTests.Tests.AddTests.TestForStringDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.012527" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1055" name="TestForStringDoubleValues(&quot;4.0&quot;,&quot;5.5&quot;)" fullname="NUnitTests.Tests.AddTests.TestForStringDoubleValues(&quot;4.0&quot;,&quot;5.5&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="204947788" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000823" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1056" name="TestForStringDoubleValues(&quot;5.23&quot;,&quot;0.0&quot;)" fullname="NUnitTests.Tests.AddTests.TestForStringDoubleValues(&quot;5.23&quot;,&quot;0.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="2026992716" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000385" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1057" name="TestForStringDoubleValues(&quot;-4.0&quot;,&quot;-5.34&quot;)" fullname="NUnitTests.Tests.AddTests.TestForStringDoubleValues(&quot;-4.0&quot;,&quot;-5.34&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="59791010" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000367" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1058" name="TestForStringDoubleValues(&quot;-4.1&quot;,&quot;5.1&quot;)" fullname="NUnitTests.Tests.AddTests.TestForStringDoubleValues(&quot;-4.1&quot;,&quot;5.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="322792680" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000418" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1049" name="TestForStringIntValues" fullname="NUnitTests.Tests.AddTests.TestForStringIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.015535" total="5" passed="0" failed="5" inconclusive="0" skipped="0" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1044" name="TestForStringIntValues(&quot;4&quot;,&quot;5&quot;)" fullname="NUnitTests.Tests.AddTests.TestForStringIntValues(&quot;4&quot;,&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1303055731" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000793" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1045" name="TestForStringIntValues(&quot;0&quot;,&quot;5&quot;)" fullname="NUnitTests.Tests.AddTests.TestForStringIntValues(&quot;0&quot;,&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1961973676" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000428" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1046" name="TestForStringIntValues(&quot;-4&quot;,&quot;-5&quot;)" fullname="NUnitTests.Tests.AddTests.TestForStringIntValues(&quot;-4&quot;,&quot;-5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1215199494" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000367" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1047" name="TestForStringIntValues(&quot;-4&quot;,&quot;5&quot;)" fullname="NUnitTests.Tests.AddTests.TestForStringIntValues(&quot;-4&quot;,&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="816324470" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000384" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1048" name="TestForStringIntValues(&quot;2147483647&quot;,&quot;2147483647&quot;)" fullname="NUnitTests.Tests.AddTests.TestForStringIntValues(&quot;2147483647&quot;,&quot;2147483647&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.AddTests" runstate="Runnable" seed="1863130175" result="Failed" label="Error" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000361" asserts="0">
+              <failure>
+                <message><![CDATA[System.InvalidCastException : Specified cast is not valid.]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Add(Object a, Object b)
+   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1064" name="CosTests" fullname="NUnitTests.Tests.CosTests" classname="NUnitTests.Tests.CosTests" runstate="Runnable" testcasecount="31" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:51Z" duration="0.112395" total="31" passed="30" failed="1" inconclusive="0" skipped="0" asserts="31">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="ParameterizedMethod" id="0-1100" name="TestForBadStringValues" fullname="NUnitTests.Tests.CosTests.TestForBadStringValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.009943" total="3" passed="2" failed="1" inconclusive="0" skipped="0" asserts="3">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1097" name="TestForBadStringValues(&quot; &quot;)" fullname="NUnitTests.Tests.CosTests.TestForBadStringValues(&quot; &quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="31508855" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000605" asserts="1" />
+            <test-case id="0-1098" name="TestForBadStringValues(&quot;string&quot;)" fullname="NUnitTests.Tests.CosTests.TestForBadStringValues(&quot;string&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1961326177" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000169" asserts="1" />
+            <test-case id="0-1099" name="TestForBadStringValues(&quot;0,55&quot;)" fullname="NUnitTests.Tests.CosTests.TestForBadStringValues(&quot;0,55&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="888363335" result="Failed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000517" asserts="1">
+              <failure>
+                <message><![CDATA[  Cos method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.CosTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\CosTests.cs:line 51
+]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1087" name="TestForDoubleValues" fullname="NUnitTests.Tests.CosTests.TestForDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.024417" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="8">
+            <test-case id="0-1079" name="TestForDoubleValues(4.0d)" fullname="NUnitTests.Tests.CosTests.TestForDoubleValues(4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="296327856" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000398" asserts="1" />
+            <test-case id="0-1080" name="TestForDoubleValues(5.5d)" fullname="NUnitTests.Tests.CosTests.TestForDoubleValues(5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1047418959" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000069" asserts="1" />
+            <test-case id="0-1081" name="TestForDoubleValues(5.23d)" fullname="NUnitTests.Tests.CosTests.TestForDoubleValues(5.23d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1732266974" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000083" asserts="1" />
+            <test-case id="0-1082" name="TestForDoubleValues(0.0d)" fullname="NUnitTests.Tests.CosTests.TestForDoubleValues(0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="405559124" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000051" asserts="1" />
+            <test-case id="0-1083" name="TestForDoubleValues(-4.0d)" fullname="NUnitTests.Tests.CosTests.TestForDoubleValues(-4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="365656601" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000045" asserts="1" />
+            <test-case id="0-1084" name="TestForDoubleValues(-5.34d)" fullname="NUnitTests.Tests.CosTests.TestForDoubleValues(-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1246004542" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000051" asserts="1" />
+            <test-case id="0-1085" name="TestForDoubleValues(-4.1d)" fullname="NUnitTests.Tests.CosTests.TestForDoubleValues(-4.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1576057384" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000066" asserts="1" />
+            <test-case id="0-1086" name="TestForDoubleValues(5.1d)" fullname="NUnitTests.Tests.CosTests.TestForDoubleValues(5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1434903748" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000049" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1071" name="TestForIntValues" fullname="NUnitTests.Tests.CosTests.TestForIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:51Z" duration="0.018508" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1065" name="TestForIntValues(4)" fullname="NUnitTests.Tests.CosTests.TestForIntValues(4)" methodname="TestForIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="608377178" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000391" asserts="1" />
+            <test-case id="0-1066" name="TestForIntValues(5)" fullname="NUnitTests.Tests.CosTests.TestForIntValues(5)" methodname="TestForIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1179440172" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000064" asserts="1" />
+            <test-case id="0-1067" name="TestForIntValues(0)" fullname="NUnitTests.Tests.CosTests.TestForIntValues(0)" methodname="TestForIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="450156984" result="Passed" start-time="2016-07-14 14:16:50Z" end-time="2016-07-14 14:16:50Z" duration="0.000045" asserts="1" />
+            <test-case id="0-1068" name="TestForIntValues(-4)" fullname="NUnitTests.Tests.CosTests.TestForIntValues(-4)" methodname="TestForIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="931210679" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000073" asserts="1" />
+            <test-case id="0-1069" name="TestForIntValues(-5)" fullname="NUnitTests.Tests.CosTests.TestForIntValues(-5)" methodname="TestForIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="417592283" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000058" asserts="1" />
+            <test-case id="0-1070" name="TestForIntValues(int.MaxValue)" fullname="NUnitTests.Tests.CosTests.TestForIntValues(int.MaxValue)" methodname="TestForIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1067862673" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000049" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1096" name="TestForStringDoubleValues" fullname="NUnitTests.Tests.CosTests.TestForStringDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.024495" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="8">
+            <test-case id="0-1088" name="TestForStringDoubleValues(&quot;4.0&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringDoubleValues(&quot;4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1476688817" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000375" asserts="1" />
+            <test-case id="0-1089" name="TestForStringDoubleValues(&quot;5.5&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringDoubleValues(&quot;5.5&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="53207200" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000042" asserts="1" />
+            <test-case id="0-1090" name="TestForStringDoubleValues(&quot;5.23&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringDoubleValues(&quot;5.23&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1454939368" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000046" asserts="1" />
+            <test-case id="0-1091" name="TestForStringDoubleValues(&quot;0.0&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringDoubleValues(&quot;0.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1106254643" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000064" asserts="1" />
+            <test-case id="0-1092" name="TestForStringDoubleValues(&quot;-4.0&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringDoubleValues(&quot;-4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="264045167" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000050" asserts="1" />
+            <test-case id="0-1093" name="TestForStringDoubleValues(&quot;-5.34&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringDoubleValues(&quot;-5.34&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="763242740" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000050" asserts="1" />
+            <test-case id="0-1094" name="TestForStringDoubleValues(&quot;-4.1&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringDoubleValues(&quot;-4.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1308494272" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000063" asserts="1" />
+            <test-case id="0-1095" name="TestForStringDoubleValues(&quot;5.1&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringDoubleValues(&quot;5.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="419976154" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000051" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1078" name="TestForStringIntValues" fullname="NUnitTests.Tests.CosTests.TestForStringIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.019491" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1072" name="TestForStringIntValues(&quot;4&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringIntValues(&quot;4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="2098728287" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000366" asserts="1" />
+            <test-case id="0-1073" name="TestForStringIntValues(&quot;5&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringIntValues(&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1440163838" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000054" asserts="1" />
+            <test-case id="0-1074" name="TestForStringIntValues(&quot;0&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringIntValues(&quot;0&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="2139221916" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000051" asserts="1" />
+            <test-case id="0-1075" name="TestForStringIntValues(&quot;-4&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringIntValues(&quot;-4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1041625712" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000048" asserts="1" />
+            <test-case id="0-1076" name="TestForStringIntValues(&quot;-5&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringIntValues(&quot;-5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="868942546" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000052" asserts="1" />
+            <test-case id="0-1077" name="TestForStringIntValues(&quot;2147483647&quot;)" fullname="NUnitTests.Tests.CosTests.TestForStringIntValues(&quot;2147483647&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.CosTests" runstate="Runnable" seed="1846464219" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000047" asserts="1" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1101" name="DivideTests" fullname="NUnitTests.Tests.DivideTests" classname="NUnitTests.Tests.DivideTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.015999" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+          <test-suite type="ParameterizedMethod" id="0-1106" name="TestForDoubleValues" fullname="NUnitTests.Tests.DivideTests.TestForDoubleValues" classname="NUnitTests.Tests.DivideTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.013000" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+            <test-case id="0-1102" name="TestForDoubleValues(4.0d,5.5d)" fullname="NUnitTests.Tests.DivideTests.TestForDoubleValues(4.0d,5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.DivideTests" runstate="Runnable" seed="62140882" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000456" asserts="1" />
+            <test-case id="0-1103" name="TestForDoubleValues(5.23d,0.0d)" fullname="NUnitTests.Tests.DivideTests.TestForDoubleValues(5.23d,0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.DivideTests" runstate="Runnable" seed="710744984" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000047" asserts="1" />
+            <test-case id="0-1104" name="TestForDoubleValues(-4.0d,-5.34d)" fullname="NUnitTests.Tests.DivideTests.TestForDoubleValues(-4.0d,-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.DivideTests" runstate="Runnable" seed="273149319" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000053" asserts="1" />
+            <test-case id="0-1105" name="TestForDoubleValues(-4.1d,5.1d)" fullname="NUnitTests.Tests.DivideTests.TestForDoubleValues(-4.1d,5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.DivideTests" runstate="Runnable" seed="1806798955" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000047" asserts="1" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1107" name="isNegativeTests" fullname="NUnitTests.Tests.isNegativeTests" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" testcasecount="28" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.103090" total="28" passed="24" failed="4" inconclusive="0" skipped="0" asserts="28">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="ParameterizedMethod" id="0-1130" name="TestForDoubleValues" fullname="NUnitTests.Tests.isNegativeTests.TestForDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.027075" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="8">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1122" name="TestForDoubleValues(4.0d)" fullname="NUnitTests.Tests.isNegativeTests.TestForDoubleValues(4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1600134281" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.001934" asserts="1" />
+            <test-case id="0-1123" name="TestForDoubleValues(5.5d)" fullname="NUnitTests.Tests.isNegativeTests.TestForDoubleValues(5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1999475958" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000071" asserts="1" />
+            <test-case id="0-1124" name="TestForDoubleValues(5.23d)" fullname="NUnitTests.Tests.isNegativeTests.TestForDoubleValues(5.23d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1619215921" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000058" asserts="1" />
+            <test-case id="0-1125" name="TestForDoubleValues(0.0d)" fullname="NUnitTests.Tests.isNegativeTests.TestForDoubleValues(0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="2096215092" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000584" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be False, but was True. Input value: 0.
+  Expected: False
+  But was:  True
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.isNegativeTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\isNegativeTests.cs:line 34
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1126" name="TestForDoubleValues(-4.0d)" fullname="NUnitTests.Tests.isNegativeTests.TestForDoubleValues(-4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="986037131" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000061" asserts="1" />
+            <test-case id="0-1127" name="TestForDoubleValues(-5.34d)" fullname="NUnitTests.Tests.isNegativeTests.TestForDoubleValues(-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="2144198564" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000048" asserts="1" />
+            <test-case id="0-1128" name="TestForDoubleValues(-4.1d)" fullname="NUnitTests.Tests.isNegativeTests.TestForDoubleValues(-4.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1703254067" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000050" asserts="1" />
+            <test-case id="0-1129" name="TestForDoubleValues(5.1d)" fullname="NUnitTests.Tests.isNegativeTests.TestForDoubleValues(5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="2052614657" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000056" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1114" name="TestForIntValues" fullname="NUnitTests.Tests.isNegativeTests.TestForIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.019966" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="6">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1108" name="TestForIntValues(4)" fullname="NUnitTests.Tests.isNegativeTests.TestForIntValues(4)" methodname="TestForIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1237550729" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000383" asserts="1" />
+            <test-case id="0-1109" name="TestForIntValues(5)" fullname="NUnitTests.Tests.isNegativeTests.TestForIntValues(5)" methodname="TestForIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="860020146" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000059" asserts="1" />
+            <test-case id="0-1110" name="TestForIntValues(0)" fullname="NUnitTests.Tests.isNegativeTests.TestForIntValues(0)" methodname="TestForIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="730029521" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000569" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be False, but was True. Input value: 0.
+  Expected: False
+  But was:  True
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.isNegativeTests.TestForIntValues(Int32 value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\isNegativeTests.cs:line 16
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1111" name="TestForIntValues(-4)" fullname="NUnitTests.Tests.isNegativeTests.TestForIntValues(-4)" methodname="TestForIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="571660023" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000086" asserts="1" />
+            <test-case id="0-1112" name="TestForIntValues(-5)" fullname="NUnitTests.Tests.isNegativeTests.TestForIntValues(-5)" methodname="TestForIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1957981141" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000064" asserts="1" />
+            <test-case id="0-1113" name="TestForIntValues(int.MaxValue)" fullname="NUnitTests.Tests.isNegativeTests.TestForIntValues(int.MaxValue)" methodname="TestForIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1392258005" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000052" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1139" name="TestForStringDoubleValues" fullname="NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.025487" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="8">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1131" name="TestForStringDoubleValues(&quot;4.0&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(&quot;4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="408467949" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000366" asserts="1" />
+            <test-case id="0-1132" name="TestForStringDoubleValues(&quot;5.5&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(&quot;5.5&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1578418724" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000053" asserts="1" />
+            <test-case id="0-1133" name="TestForStringDoubleValues(&quot;5.23&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(&quot;5.23&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1924269602" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000055" asserts="1" />
+            <test-case id="0-1134" name="TestForStringDoubleValues(&quot;0.0&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(&quot;0.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1257812962" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000536" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be False, but was True. Input value: '0.0'.
+  Expected: False
+  But was:  True
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\isNegativeTests.cs:line 43
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1135" name="TestForStringDoubleValues(&quot;-4.0&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(&quot;-4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="2063071519" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000076" asserts="1" />
+            <test-case id="0-1136" name="TestForStringDoubleValues(&quot;-5.34&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(&quot;-5.34&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1151871449" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000044" asserts="1" />
+            <test-case id="0-1137" name="TestForStringDoubleValues(&quot;-4.1&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(&quot;-4.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="157577915" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000046" asserts="1" />
+            <test-case id="0-1138" name="TestForStringDoubleValues(&quot;5.1&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(&quot;5.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="243216970" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000050" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1121" name="TestForStringIntValues" fullname="NUnitTests.Tests.isNegativeTests.TestForStringIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.018561" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="6">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1115" name="TestForStringIntValues(&quot;4&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringIntValues(&quot;4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1570078090" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000454" asserts="1" />
+            <test-case id="0-1116" name="TestForStringIntValues(&quot;5&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringIntValues(&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="791230500" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000105" asserts="1" />
+            <test-case id="0-1117" name="TestForStringIntValues(&quot;0&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringIntValues(&quot;0&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1084795781" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000575" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be False, but was True. Input value: '0'.
+  Expected: False
+  But was:  True
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.isNegativeTests.TestForStringIntValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\isNegativeTests.cs:line 25
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1118" name="TestForStringIntValues(&quot;-4&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringIntValues(&quot;-4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="1444034910" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000045" asserts="1" />
+            <test-case id="0-1119" name="TestForStringIntValues(&quot;-5&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringIntValues(&quot;-5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="993799759" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000046" asserts="1" />
+            <test-case id="0-1120" name="TestForStringIntValues(&quot;2147483647&quot;)" fullname="NUnitTests.Tests.isNegativeTests.TestForStringIntValues(&quot;2147483647&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isNegativeTests" runstate="Runnable" seed="943985643" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000051" asserts="1" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1140" name="isPositiveTests" fullname="NUnitTests.Tests.isPositiveTests" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" testcasecount="28" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.098513" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="28">
+          <test-suite type="ParameterizedMethod" id="0-1163" name="TestForDoubleValues" fullname="NUnitTests.Tests.isPositiveTests.TestForDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.024550" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="8">
+            <test-case id="0-1155" name="TestForDoubleValues(4.0d)" fullname="NUnitTests.Tests.isPositiveTests.TestForDoubleValues(4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="2098495893" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000538" asserts="1" />
+            <test-case id="0-1156" name="TestForDoubleValues(5.5d)" fullname="NUnitTests.Tests.isPositiveTests.TestForDoubleValues(5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="515841795" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000050" asserts="1" />
+            <test-case id="0-1157" name="TestForDoubleValues(5.23d)" fullname="NUnitTests.Tests.isPositiveTests.TestForDoubleValues(5.23d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="2043767434" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000063" asserts="1" />
+            <test-case id="0-1158" name="TestForDoubleValues(0.0d)" fullname="NUnitTests.Tests.isPositiveTests.TestForDoubleValues(0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="324054791" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000055" asserts="1" />
+            <test-case id="0-1159" name="TestForDoubleValues(-4.0d)" fullname="NUnitTests.Tests.isPositiveTests.TestForDoubleValues(-4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="490987615" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000046" asserts="1" />
+            <test-case id="0-1160" name="TestForDoubleValues(-5.34d)" fullname="NUnitTests.Tests.isPositiveTests.TestForDoubleValues(-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1167323096" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000046" asserts="1" />
+            <test-case id="0-1161" name="TestForDoubleValues(-4.1d)" fullname="NUnitTests.Tests.isPositiveTests.TestForDoubleValues(-4.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1605946426" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000063" asserts="1" />
+            <test-case id="0-1162" name="TestForDoubleValues(5.1d)" fullname="NUnitTests.Tests.isPositiveTests.TestForDoubleValues(5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1781298066" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000084" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1147" name="TestForIntValues" fullname="NUnitTests.Tests.isPositiveTests.TestForIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.017914" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1141" name="TestForIntValues(4)" fullname="NUnitTests.Tests.isPositiveTests.TestForIntValues(4)" methodname="TestForIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1806139225" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000392" asserts="1" />
+            <test-case id="0-1142" name="TestForIntValues(5)" fullname="NUnitTests.Tests.isPositiveTests.TestForIntValues(5)" methodname="TestForIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="151783624" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000057" asserts="1" />
+            <test-case id="0-1143" name="TestForIntValues(0)" fullname="NUnitTests.Tests.isPositiveTests.TestForIntValues(0)" methodname="TestForIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="496981865" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000054" asserts="1" />
+            <test-case id="0-1144" name="TestForIntValues(-4)" fullname="NUnitTests.Tests.isPositiveTests.TestForIntValues(-4)" methodname="TestForIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1439920116" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000055" asserts="1" />
+            <test-case id="0-1145" name="TestForIntValues(-5)" fullname="NUnitTests.Tests.isPositiveTests.TestForIntValues(-5)" methodname="TestForIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="967703365" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000061" asserts="1" />
+            <test-case id="0-1146" name="TestForIntValues(int.MaxValue)" fullname="NUnitTests.Tests.isPositiveTests.TestForIntValues(int.MaxValue)" methodname="TestForIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1480864570" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000066" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1172" name="TestForStringDoubleValues" fullname="NUnitTests.Tests.isPositiveTests.TestForStringDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.025525" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="8">
+            <test-case id="0-1164" name="TestForStringDoubleValues(&quot;4.0&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringDoubleValues(&quot;4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="2128833368" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000352" asserts="1" />
+            <test-case id="0-1165" name="TestForStringDoubleValues(&quot;5.5&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringDoubleValues(&quot;5.5&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1378175799" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000050" asserts="1" />
+            <test-case id="0-1166" name="TestForStringDoubleValues(&quot;5.23&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringDoubleValues(&quot;5.23&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1796007642" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000057" asserts="1" />
+            <test-case id="0-1167" name="TestForStringDoubleValues(&quot;0.0&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringDoubleValues(&quot;0.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="950135922" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000066" asserts="1" />
+            <test-case id="0-1168" name="TestForStringDoubleValues(&quot;-4.0&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringDoubleValues(&quot;-4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="438460228" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000083" asserts="1" />
+            <test-case id="0-1169" name="TestForStringDoubleValues(&quot;-5.34&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringDoubleValues(&quot;-5.34&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="730767378" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000047" asserts="1" />
+            <test-case id="0-1170" name="TestForStringDoubleValues(&quot;-4.1&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringDoubleValues(&quot;-4.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1824567281" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000056" asserts="1" />
+            <test-case id="0-1171" name="TestForStringDoubleValues(&quot;5.1&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringDoubleValues(&quot;5.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="934507122" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000060" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1154" name="TestForStringIntValues" fullname="NUnitTests.Tests.isPositiveTests.TestForStringIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.018495" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1148" name="TestForStringIntValues(&quot;4&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringIntValues(&quot;4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1468263886" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000361" asserts="1" />
+            <test-case id="0-1149" name="TestForStringIntValues(&quot;5&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringIntValues(&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="810629047" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000052" asserts="1" />
+            <test-case id="0-1150" name="TestForStringIntValues(&quot;0&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringIntValues(&quot;0&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1039056177" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000053" asserts="1" />
+            <test-case id="0-1151" name="TestForStringIntValues(&quot;-4&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringIntValues(&quot;-4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1856640653" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000053" asserts="1" />
+            <test-case id="0-1152" name="TestForStringIntValues(&quot;-5&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringIntValues(&quot;-5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="1252298848" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000070" asserts="1" />
+            <test-case id="0-1153" name="TestForStringIntValues(&quot;2147483647&quot;)" fullname="NUnitTests.Tests.isPositiveTests.TestForStringIntValues(&quot;2147483647&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.isPositiveTests" runstate="Runnable" seed="915500309" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000058" asserts="1" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1173" name="MultiplyTests" fullname="NUnitTests.Tests.MultiplyTests" classname="NUnitTests.Tests.MultiplyTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.015026" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+          <test-suite type="ParameterizedMethod" id="0-1178" name="TestForDoubleValues" fullname="NUnitTests.Tests.MultiplyTests.TestForDoubleValues" classname="NUnitTests.Tests.MultiplyTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.012044" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+            <test-case id="0-1174" name="TestForDoubleValues(4.0d,5.5d)" fullname="NUnitTests.Tests.MultiplyTests.TestForDoubleValues(4.0d,5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.MultiplyTests" runstate="Runnable" seed="1525647113" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000465" asserts="1" />
+            <test-case id="0-1175" name="TestForDoubleValues(5.23d,0.0d)" fullname="NUnitTests.Tests.MultiplyTests.TestForDoubleValues(5.23d,0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.MultiplyTests" runstate="Runnable" seed="229966687" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000045" asserts="1" />
+            <test-case id="0-1176" name="TestForDoubleValues(-4.0d,-5.34d)" fullname="NUnitTests.Tests.MultiplyTests.TestForDoubleValues(-4.0d,-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.MultiplyTests" runstate="Runnable" seed="1826429762" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000051" asserts="1" />
+            <test-case id="0-1177" name="TestForDoubleValues(-4.1d,5.1d)" fullname="NUnitTests.Tests.MultiplyTests.TestForDoubleValues(-4.1d,5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.MultiplyTests" runstate="Runnable" seed="1600870285" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000055" asserts="1" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1179" name="PowTests" fullname="NUnitTests.Tests.PowTests" classname="NUnitTests.Tests.PowTests" runstate="Runnable" testcasecount="21" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.082167" total="21" passed="3" failed="18" inconclusive="0" skipped="0" asserts="3">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="ParameterizedMethod" id="0-1205" name="TestForBadStringValues" fullname="NUnitTests.Tests.PowTests.TestForBadStringValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.009532" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3">
+            <test-case id="0-1202" name="TestForBadStringValues(&quot; &quot;,&quot; &quot;)" fullname="NUnitTests.Tests.PowTests.TestForBadStringValues(&quot; &quot;,&quot; &quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="2132444326" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000831" asserts="1" />
+            <test-case id="0-1203" name="TestForBadStringValues(&quot;string&quot;,&quot;onemorestring&quot;)" fullname="NUnitTests.Tests.PowTests.TestForBadStringValues(&quot;string&quot;,&quot;onemorestring&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1581355519" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000127" asserts="1" />
+            <test-case id="0-1204" name="TestForBadStringValues(&quot;0,55&quot;,&quot;5t&quot;)" fullname="NUnitTests.Tests.PowTests.TestForBadStringValues(&quot;0,55&quot;,&quot;5t&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1057656787" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000123" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1196" name="TestForDoubleValues" fullname="NUnitTests.Tests.PowTests.TestForDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.013036" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1192" name="TestForDoubleValues(4.0d,5.5d)" fullname="NUnitTests.Tests.PowTests.TestForDoubleValues(4.0d,5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="2114740150" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.001024" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForDoubleValues(Double firstValue, Double secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 33]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1193" name="TestForDoubleValues(5.23d,0.0d)" fullname="NUnitTests.Tests.PowTests.TestForDoubleValues(5.23d,0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="211103988" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000374" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForDoubleValues(Double firstValue, Double secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 33]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1194" name="TestForDoubleValues(-4.0d,-5.34d)" fullname="NUnitTests.Tests.PowTests.TestForDoubleValues(-4.0d,-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1779560598" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000416" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForDoubleValues(Double firstValue, Double secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 33]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1195" name="TestForDoubleValues(-4.1d,5.1d)" fullname="NUnitTests.Tests.PowTests.TestForDoubleValues(-4.1d,5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="11887607" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000383" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForDoubleValues(Double firstValue, Double secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 33]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1185" name="TestForIntValues" fullname="NUnitTests.Tests.PowTests.TestForIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.016060" total="5" passed="0" failed="5" inconclusive="0" skipped="0" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1180" name="TestForIntValues(4,5)" fullname="NUnitTests.Tests.PowTests.TestForIntValues(4,5)" methodname="TestForIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1720870747" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000889" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1181" name="TestForIntValues(0,5)" fullname="NUnitTests.Tests.PowTests.TestForIntValues(0,5)" methodname="TestForIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="506451545" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000418" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1182" name="TestForIntValues(-4,-5)" fullname="NUnitTests.Tests.PowTests.TestForIntValues(-4,-5)" methodname="TestForIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="178405834" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000391" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1183" name="TestForIntValues(-4,5)" fullname="NUnitTests.Tests.PowTests.TestForIntValues(-4,5)" methodname="TestForIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1190093189" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000425" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1184" name="TestForIntValues(int.MaxValue,int.MaxValue)" fullname="NUnitTests.Tests.PowTests.TestForIntValues(int.MaxValue,int.MaxValue)" methodname="TestForIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="974068945" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000456" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1201" name="TestForStringDoubleValues" fullname="NUnitTests.Tests.PowTests.TestForStringDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.012574" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1197" name="TestForStringDoubleValues(&quot;4.0&quot;,&quot;5.5&quot;)" fullname="NUnitTests.Tests.PowTests.TestForStringDoubleValues(&quot;4.0&quot;,&quot;5.5&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1926190278" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000924" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1198" name="TestForStringDoubleValues(&quot;5.23&quot;,&quot;0.0&quot;)" fullname="NUnitTests.Tests.PowTests.TestForStringDoubleValues(&quot;5.23&quot;,&quot;0.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="816249209" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000442" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1199" name="TestForStringDoubleValues(&quot;-4.0&quot;,&quot;-5.34&quot;)" fullname="NUnitTests.Tests.PowTests.TestForStringDoubleValues(&quot;-4.0&quot;,&quot;-5.34&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1781215613" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000399" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1200" name="TestForStringDoubleValues(&quot;-4.1&quot;,&quot;5.1&quot;)" fullname="NUnitTests.Tests.PowTests.TestForStringDoubleValues(&quot;-4.1&quot;,&quot;5.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1877430199" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000376" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1191" name="TestForStringIntValues" fullname="NUnitTests.Tests.PowTests.TestForStringIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.015513" total="5" passed="0" failed="5" inconclusive="0" skipped="0" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1186" name="TestForStringIntValues(&quot;4&quot;,&quot;5&quot;)" fullname="NUnitTests.Tests.PowTests.TestForStringIntValues(&quot;4&quot;,&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="2027878990" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000881" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1187" name="TestForStringIntValues(&quot;0&quot;,&quot;5&quot;)" fullname="NUnitTests.Tests.PowTests.TestForStringIntValues(&quot;0&quot;,&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1170929136" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000367" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1188" name="TestForStringIntValues(&quot;-4&quot;,&quot;-5&quot;)" fullname="NUnitTests.Tests.PowTests.TestForStringIntValues(&quot;-4&quot;,&quot;-5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1838468655" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000400" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1189" name="TestForStringIntValues(&quot;-4&quot;,&quot;5&quot;)" fullname="NUnitTests.Tests.PowTests.TestForStringIntValues(&quot;-4&quot;,&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="491699790" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000401" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1190" name="TestForStringIntValues(&quot;2147483647&quot;,&quot;2147483647&quot;)" fullname="NUnitTests.Tests.PowTests.TestForStringIntValues(&quot;2147483647&quot;,&quot;2147483647&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.PowTests" runstate="Runnable" seed="1010944491" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000391" asserts="0">
+              <failure>
+                <message><![CDATA[System.NotFiniteNumberException : Wrong input]]></message>
+                <stack-trace><![CDATA[   at CSharpCalculator.Calculator.Pow(Object a, Object b)
+   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1206" name="SinTests" fullname="NUnitTests.Tests.SinTests" classname="NUnitTests.Tests.SinTests" runstate="Runnable" testcasecount="31" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.113380" total="31" passed="30" failed="1" inconclusive="0" skipped="0" asserts="31">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="ParameterizedMethod" id="0-1242" name="TestForBadStringValues" fullname="NUnitTests.Tests.SinTests.TestForBadStringValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.010005" total="3" passed="2" failed="1" inconclusive="0" skipped="0" asserts="3">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1239" name="TestForBadStringValues(&quot; &quot;)" fullname="NUnitTests.Tests.SinTests.TestForBadStringValues(&quot; &quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="2052640199" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000658" asserts="1" />
+            <test-case id="0-1240" name="TestForBadStringValues(&quot;string&quot;)" fullname="NUnitTests.Tests.SinTests.TestForBadStringValues(&quot;string&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="954672318" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000161" asserts="1" />
+            <test-case id="0-1241" name="TestForBadStringValues(&quot;0,55&quot;)" fullname="NUnitTests.Tests.SinTests.TestForBadStringValues(&quot;0,55&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1199200896" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000547" asserts="1">
+              <failure>
+                <message><![CDATA[  Sin method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.SinTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SinTests.cs:line 51
+]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1229" name="TestForDoubleValues" fullname="NUnitTests.Tests.SinTests.TestForDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.024811" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="8">
+            <test-case id="0-1221" name="TestForDoubleValues(4.0d)" fullname="NUnitTests.Tests.SinTests.TestForDoubleValues(4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1102277689" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000410" asserts="1" />
+            <test-case id="0-1222" name="TestForDoubleValues(5.5d)" fullname="NUnitTests.Tests.SinTests.TestForDoubleValues(5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="878869764" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000049" asserts="1" />
+            <test-case id="0-1223" name="TestForDoubleValues(5.23d)" fullname="NUnitTests.Tests.SinTests.TestForDoubleValues(5.23d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="2106905218" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000045" asserts="1" />
+            <test-case id="0-1224" name="TestForDoubleValues(0.0d)" fullname="NUnitTests.Tests.SinTests.TestForDoubleValues(0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="455524634" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000041" asserts="1" />
+            <test-case id="0-1225" name="TestForDoubleValues(-4.0d)" fullname="NUnitTests.Tests.SinTests.TestForDoubleValues(-4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="155424856" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000069" asserts="1" />
+            <test-case id="0-1226" name="TestForDoubleValues(-5.34d)" fullname="NUnitTests.Tests.SinTests.TestForDoubleValues(-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="408784272" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000050" asserts="1" />
+            <test-case id="0-1227" name="TestForDoubleValues(-4.1d)" fullname="NUnitTests.Tests.SinTests.TestForDoubleValues(-4.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="821896784" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000045" asserts="1" />
+            <test-case id="0-1228" name="TestForDoubleValues(5.1d)" fullname="NUnitTests.Tests.SinTests.TestForDoubleValues(5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1734347074" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000062" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1213" name="TestForIntValues" fullname="NUnitTests.Tests.SinTests.TestForIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.018548" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1207" name="TestForIntValues(4)" fullname="NUnitTests.Tests.SinTests.TestForIntValues(4)" methodname="TestForIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1114771842" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000381" asserts="1" />
+            <test-case id="0-1208" name="TestForIntValues(5)" fullname="NUnitTests.Tests.SinTests.TestForIntValues(5)" methodname="TestForIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="607828304" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000062" asserts="1" />
+            <test-case id="0-1209" name="TestForIntValues(0)" fullname="NUnitTests.Tests.SinTests.TestForIntValues(0)" methodname="TestForIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1622454788" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000039" asserts="1" />
+            <test-case id="0-1210" name="TestForIntValues(-4)" fullname="NUnitTests.Tests.SinTests.TestForIntValues(-4)" methodname="TestForIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1660990270" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000085" asserts="1" />
+            <test-case id="0-1211" name="TestForIntValues(-5)" fullname="NUnitTests.Tests.SinTests.TestForIntValues(-5)" methodname="TestForIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="358731212" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000044" asserts="1" />
+            <test-case id="0-1212" name="TestForIntValues(int.MaxValue)" fullname="NUnitTests.Tests.SinTests.TestForIntValues(int.MaxValue)" methodname="TestForIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="801934744" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000046" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1238" name="TestForStringDoubleValues" fullname="NUnitTests.Tests.SinTests.TestForStringDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.026985" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="8">
+            <test-case id="0-1230" name="TestForStringDoubleValues(&quot;4.0&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringDoubleValues(&quot;4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="928268286" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000391" asserts="1" />
+            <test-case id="0-1231" name="TestForStringDoubleValues(&quot;5.5&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringDoubleValues(&quot;5.5&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1741960861" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000058" asserts="1" />
+            <test-case id="0-1232" name="TestForStringDoubleValues(&quot;5.23&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringDoubleValues(&quot;5.23&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1079126756" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000041" asserts="1" />
+            <test-case id="0-1233" name="TestForStringDoubleValues(&quot;0.0&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringDoubleValues(&quot;0.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="917848171" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000045" asserts="1" />
+            <test-case id="0-1234" name="TestForStringDoubleValues(&quot;-4.0&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringDoubleValues(&quot;-4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="57950211" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000060" asserts="1" />
+            <test-case id="0-1235" name="TestForStringDoubleValues(&quot;-5.34&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringDoubleValues(&quot;-5.34&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="831936017" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000059" asserts="1" />
+            <test-case id="0-1236" name="TestForStringDoubleValues(&quot;-4.1&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringDoubleValues(&quot;-4.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="446239485" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000055" asserts="1" />
+            <test-case id="0-1237" name="TestForStringDoubleValues(&quot;5.1&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringDoubleValues(&quot;5.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1219698591" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000078" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1220" name="TestForStringIntValues" fullname="NUnitTests.Tests.SinTests.TestForStringIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.018038" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1214" name="TestForStringIntValues(&quot;4&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringIntValues(&quot;4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="272668558" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000339" asserts="1" />
+            <test-case id="0-1215" name="TestForStringIntValues(&quot;5&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringIntValues(&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1215336093" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000044" asserts="1" />
+            <test-case id="0-1216" name="TestForStringIntValues(&quot;0&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringIntValues(&quot;0&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="453382655" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000046" asserts="1" />
+            <test-case id="0-1217" name="TestForStringIntValues(&quot;-4&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringIntValues(&quot;-4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="254768376" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000053" asserts="1" />
+            <test-case id="0-1218" name="TestForStringIntValues(&quot;-5&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringIntValues(&quot;-5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1670902855" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000062" asserts="1" />
+            <test-case id="0-1219" name="TestForStringIntValues(&quot;2147483647&quot;)" fullname="NUnitTests.Tests.SinTests.TestForStringIntValues(&quot;2147483647&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SinTests" runstate="Runnable" seed="1696298207" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000052" asserts="1" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1243" name="SqrtTests" fullname="NUnitTests.Tests.SqrtTests" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" testcasecount="31" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.125502" total="31" passed="17" failed="14" inconclusive="0" skipped="0" asserts="23">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="ParameterizedMethod" id="0-1279" name="TestForBadStringValues" fullname="NUnitTests.Tests.SqrtTests.TestForBadStringValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.010533" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="3">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1276" name="TestForBadStringValues(&quot; &quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForBadStringValues(&quot; &quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="33345386" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.001032" asserts="1">
+              <failure>
+                <message><![CDATA[  Sqrt method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.FormatException>
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.SqrtTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 51
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1277" name="TestForBadStringValues(&quot;string&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForBadStringValues(&quot;string&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="761664405" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000512" asserts="1">
+              <failure>
+                <message><![CDATA[  Sqrt method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.FormatException>
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.SqrtTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 51
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1278" name="TestForBadStringValues(&quot;0,55&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForBadStringValues(&quot;0,55&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1127750147" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000487" asserts="1">
+              <failure>
+                <message><![CDATA[  Sqrt method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.FormatException>
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.SqrtTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 51
+]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1266" name="TestForDoubleValues" fullname="NUnitTests.Tests.SqrtTests.TestForDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.026442" total="8" passed="5" failed="3" inconclusive="0" skipped="0" asserts="8">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1258" name="TestForDoubleValues(4.0d)" fullname="NUnitTests.Tests.SqrtTests.TestForDoubleValues(4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="639979381" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000439" asserts="1" />
+            <test-case id="0-1259" name="TestForDoubleValues(5.5d)" fullname="NUnitTests.Tests.SqrtTests.TestForDoubleValues(5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="620068933" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000467" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be 2.34520787991171, but was 2.44948974278318. Input value: 5.5.
+  Expected: 2.3452078799117149d
+  But was:  2.4494897427831779d
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.SqrtTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 34
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1260" name="TestForDoubleValues(5.23d)" fullname="NUnitTests.Tests.SqrtTests.TestForDoubleValues(5.23d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1790563967" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000394" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be 2.28691932520585, but was 2.23606797749979. Input value: 5.23.
+  Expected: 2.2869193252058544d
+  But was:  2.2360679774997898d
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.SqrtTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 34
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1261" name="TestForDoubleValues(0.0d)" fullname="NUnitTests.Tests.SqrtTests.TestForDoubleValues(0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="997901643" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000044" asserts="1" />
+            <test-case id="0-1262" name="TestForDoubleValues(-4.0d)" fullname="NUnitTests.Tests.SqrtTests.TestForDoubleValues(-4.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1126968498" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000047" asserts="1" />
+            <test-case id="0-1263" name="TestForDoubleValues(-5.34d)" fullname="NUnitTests.Tests.SqrtTests.TestForDoubleValues(-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="2055963406" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000046" asserts="1" />
+            <test-case id="0-1264" name="TestForDoubleValues(-4.1d)" fullname="NUnitTests.Tests.SqrtTests.TestForDoubleValues(-4.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="859202407" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000039" asserts="1" />
+            <test-case id="0-1265" name="TestForDoubleValues(5.1d)" fullname="NUnitTests.Tests.SqrtTests.TestForDoubleValues(5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="605020530" result="Failed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000466" asserts="1">
+              <failure>
+                <message><![CDATA[  Result must be 2.25831795812724, but was 2.23606797749979. Input value: 5.1.
+  Expected: 2.2583179581272428d
+  But was:  2.2360679774997898d
+]]></message>
+                <stack-trace><![CDATA[at NUnitTests.Tests.SqrtTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 34
+]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1250" name="TestForIntValues" fullname="NUnitTests.Tests.SqrtTests.TestForIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.018902" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1244" name="TestForIntValues(4)" fullname="NUnitTests.Tests.SqrtTests.TestForIntValues(4)" methodname="TestForIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1058702843" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000463" asserts="1" />
+            <test-case id="0-1245" name="TestForIntValues(5)" fullname="NUnitTests.Tests.SqrtTests.TestForIntValues(5)" methodname="TestForIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1997323009" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000071" asserts="1" />
+            <test-case id="0-1246" name="TestForIntValues(0)" fullname="NUnitTests.Tests.SqrtTests.TestForIntValues(0)" methodname="TestForIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1523242892" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000055" asserts="1" />
+            <test-case id="0-1247" name="TestForIntValues(-4)" fullname="NUnitTests.Tests.SqrtTests.TestForIntValues(-4)" methodname="TestForIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="410274105" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000047" asserts="1" />
+            <test-case id="0-1248" name="TestForIntValues(-5)" fullname="NUnitTests.Tests.SqrtTests.TestForIntValues(-5)" methodname="TestForIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="2064198622" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000037" asserts="1" />
+            <test-case id="0-1249" name="TestForIntValues(int.MaxValue)" fullname="NUnitTests.Tests.SqrtTests.TestForIntValues(int.MaxValue)" methodname="TestForIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="483122834" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000081" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1275" name="TestForStringDoubleValues" fullname="NUnitTests.Tests.SqrtTests.TestForStringDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.036469" total="8" passed="0" failed="8" inconclusive="0" skipped="0" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="0-1267" name="TestForStringDoubleValues(&quot;4.0&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(&quot;4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1096398736" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.011767" asserts="0">
+              <failure>
+                <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
+                <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at CSharpCalculator.Calculator.Sqrt(Object a)
+   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1268" name="TestForStringDoubleValues(&quot;5.5&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(&quot;5.5&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="249395138" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000340" asserts="0">
+              <failure>
+                <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
+                <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at CSharpCalculator.Calculator.Sqrt(Object a)
+   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1269" name="TestForStringDoubleValues(&quot;5.23&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(&quot;5.23&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="2022424393" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000298" asserts="0">
+              <failure>
+                <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
+                <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at CSharpCalculator.Calculator.Sqrt(Object a)
+   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1270" name="TestForStringDoubleValues(&quot;0.0&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(&quot;0.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="752172007" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000273" asserts="0">
+              <failure>
+                <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
+                <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at CSharpCalculator.Calculator.Sqrt(Object a)
+   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1271" name="TestForStringDoubleValues(&quot;-4.0&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(&quot;-4.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1733545156" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000329" asserts="0">
+              <failure>
+                <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
+                <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at CSharpCalculator.Calculator.Sqrt(Object a)
+   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1272" name="TestForStringDoubleValues(&quot;-5.34&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(&quot;-5.34&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1968223820" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000292" asserts="0">
+              <failure>
+                <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
+                <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at CSharpCalculator.Calculator.Sqrt(Object a)
+   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1273" name="TestForStringDoubleValues(&quot;-4.1&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(&quot;-4.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="466652853" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000300" asserts="0">
+              <failure>
+                <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
+                <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at CSharpCalculator.Calculator.Sqrt(Object a)
+   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="0-1274" name="TestForStringDoubleValues(&quot;5.1&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(&quot;5.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1729159810" result="Failed" label="Error" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000357" asserts="0">
+              <failure>
+                <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
+                <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at CSharpCalculator.Calculator.Sqrt(Object a)
+   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42]]></stack-trace>
+              </failure>
+            </test-case>
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1257" name="TestForStringIntValues" fullname="NUnitTests.Tests.SqrtTests.TestForStringIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.018064" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="6">
+            <test-case id="0-1251" name="TestForStringIntValues(&quot;4&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringIntValues(&quot;4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1899190675" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000354" asserts="1" />
+            <test-case id="0-1252" name="TestForStringIntValues(&quot;5&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringIntValues(&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="625327773" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000062" asserts="1" />
+            <test-case id="0-1253" name="TestForStringIntValues(&quot;0&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringIntValues(&quot;0&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="2109411924" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000040" asserts="1" />
+            <test-case id="0-1254" name="TestForStringIntValues(&quot;-4&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringIntValues(&quot;-4&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1092013828" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000078" asserts="1" />
+            <test-case id="0-1255" name="TestForStringIntValues(&quot;-5&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringIntValues(&quot;-5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="751251648" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000042" asserts="1" />
+            <test-case id="0-1256" name="TestForStringIntValues(&quot;2147483647&quot;)" fullname="NUnitTests.Tests.SqrtTests.TestForStringIntValues(&quot;2147483647&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SqrtTests" runstate="Runnable" seed="1586245547" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000052" asserts="1" />
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1280" name="SubTests" fullname="NUnitTests.Tests.SubTests" classname="NUnitTests.Tests.SubTests" runstate="Runnable" testcasecount="21" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.081018" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="21">
+          <test-suite type="ParameterizedMethod" id="0-1306" name="TestForBadStringValues" fullname="NUnitTests.Tests.SubTests.TestForBadStringValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.009499" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3">
+            <test-case id="0-1303" name="TestForBadStringValues(&quot; &quot;,&quot; &quot;)" fullname="NUnitTests.Tests.SubTests.TestForBadStringValues(&quot; &quot;,&quot; &quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="229526376" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000880" asserts="1" />
+            <test-case id="0-1304" name="TestForBadStringValues(&quot;string&quot;,&quot;onemorestring&quot;)" fullname="NUnitTests.Tests.SubTests.TestForBadStringValues(&quot;string&quot;,&quot;onemorestring&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1223123598" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000169" asserts="1" />
+            <test-case id="0-1305" name="TestForBadStringValues(&quot;0,55&quot;,&quot;5t&quot;)" fullname="NUnitTests.Tests.SubTests.TestForBadStringValues(&quot;0,55&quot;,&quot;5t&quot;)" methodname="TestForBadStringValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="621605721" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000118" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1297" name="TestForDoubleValues" fullname="NUnitTests.Tests.SubTests.TestForDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.012977" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+            <test-case id="0-1293" name="TestForDoubleValues(4.0d,5.5d)" fullname="NUnitTests.Tests.SubTests.TestForDoubleValues(4.0d,5.5d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1103732696" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000461" asserts="1" />
+            <test-case id="0-1294" name="TestForDoubleValues(5.23d,0.0d)" fullname="NUnitTests.Tests.SubTests.TestForDoubleValues(5.23d,0.0d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="65489862" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000043" asserts="1" />
+            <test-case id="0-1295" name="TestForDoubleValues(-4.0d,-5.34d)" fullname="NUnitTests.Tests.SubTests.TestForDoubleValues(-4.0d,-5.34d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="547188109" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000053" asserts="1" />
+            <test-case id="0-1296" name="TestForDoubleValues(-4.1d,5.1d)" fullname="NUnitTests.Tests.SubTests.TestForDoubleValues(-4.1d,5.1d)" methodname="TestForDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1984789739" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000044" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1286" name="TestForIntValues" fullname="NUnitTests.Tests.SubTests.TestForIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.016016" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="5">
+            <test-case id="0-1281" name="TestForIntValues(4,5)" fullname="NUnitTests.Tests.SubTests.TestForIntValues(4,5)" methodname="TestForIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="104289152" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000459" asserts="1" />
+            <test-case id="0-1282" name="TestForIntValues(0,5)" fullname="NUnitTests.Tests.SubTests.TestForIntValues(0,5)" methodname="TestForIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1048032549" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000069" asserts="1" />
+            <test-case id="0-1283" name="TestForIntValues(-4,-5)" fullname="NUnitTests.Tests.SubTests.TestForIntValues(-4,-5)" methodname="TestForIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="183954345" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000043" asserts="1" />
+            <test-case id="0-1284" name="TestForIntValues(-4,5)" fullname="NUnitTests.Tests.SubTests.TestForIntValues(-4,5)" methodname="TestForIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="248129456" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000047" asserts="1" />
+            <test-case id="0-1285" name="TestForIntValues(int.MaxValue,int.MaxValue)" fullname="NUnitTests.Tests.SubTests.TestForIntValues(int.MaxValue,int.MaxValue)" methodname="TestForIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="997036926" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000054" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1302" name="TestForStringDoubleValues" fullname="NUnitTests.Tests.SubTests.TestForStringDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.012046" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+            <test-case id="0-1298" name="TestForStringDoubleValues(&quot;4.0&quot;,&quot;5.5&quot;)" fullname="NUnitTests.Tests.SubTests.TestForStringDoubleValues(&quot;4.0&quot;,&quot;5.5&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1348469921" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000423" asserts="1" />
+            <test-case id="0-1299" name="TestForStringDoubleValues(&quot;5.23&quot;,&quot;0.0&quot;)" fullname="NUnitTests.Tests.SubTests.TestForStringDoubleValues(&quot;5.23&quot;,&quot;0.0&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1477120886" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000045" asserts="1" />
+            <test-case id="0-1300" name="TestForStringDoubleValues(&quot;-4.0&quot;,&quot;-5.34&quot;)" fullname="NUnitTests.Tests.SubTests.TestForStringDoubleValues(&quot;-4.0&quot;,&quot;-5.34&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1648384725" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000049" asserts="1" />
+            <test-case id="0-1301" name="TestForStringDoubleValues(&quot;-4.1&quot;,&quot;5.1&quot;)" fullname="NUnitTests.Tests.SubTests.TestForStringDoubleValues(&quot;-4.1&quot;,&quot;5.1&quot;)" methodname="TestForStringDoubleValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1639582938" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000059" asserts="1" />
+          </test-suite>
+          <test-suite type="ParameterizedMethod" id="0-1292" name="TestForStringIntValues" fullname="NUnitTests.Tests.SubTests.TestForStringIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.015038" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="5">
+            <test-case id="0-1287" name="TestForStringIntValues(&quot;4&quot;,&quot;5&quot;)" fullname="NUnitTests.Tests.SubTests.TestForStringIntValues(&quot;4&quot;,&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1805568222" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000418" asserts="1" />
+            <test-case id="0-1288" name="TestForStringIntValues(&quot;0&quot;,&quot;5&quot;)" fullname="NUnitTests.Tests.SubTests.TestForStringIntValues(&quot;0&quot;,&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1211445593" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000084" asserts="1" />
+            <test-case id="0-1289" name="TestForStringIntValues(&quot;-4&quot;,&quot;-5&quot;)" fullname="NUnitTests.Tests.SubTests.TestForStringIntValues(&quot;-4&quot;,&quot;-5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="575243484" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000052" asserts="1" />
+            <test-case id="0-1290" name="TestForStringIntValues(&quot;-4&quot;,&quot;5&quot;)" fullname="NUnitTests.Tests.SubTests.TestForStringIntValues(&quot;-4&quot;,&quot;5&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="1699927619" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000056" asserts="1" />
+            <test-case id="0-1291" name="TestForStringIntValues(&quot;2147483647&quot;,&quot;2147483647&quot;)" fullname="NUnitTests.Tests.SubTests.TestForStringIntValues(&quot;2147483647&quot;,&quot;2147483647&quot;)" methodname="TestForStringIntValues" classname="NUnitTests.Tests.SubTests" runstate="Runnable" seed="27212965" result="Passed" start-time="2016-07-14 14:16:51Z" end-time="2016-07-14 14:16:51Z" duration="0.000045" asserts="1" />
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

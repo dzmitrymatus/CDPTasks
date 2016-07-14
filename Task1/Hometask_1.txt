@@ -1,0 +1,33 @@
+Взять за основу SUT (system under test) текущего проекта
+	Предоставить ответы на следующие вопросы:
+		* Нужно ли делать автоматизацию? Почему?
+		* Что можно заавтоматизировать? Почему?
+
+Если автоматизация на проекте уже есть:
+	Определить срок окупаемости автоматизации исходя из затрат на ручное и автоматизированное тестирование.
+
+
+
+
+В качестве формулы для расчета ROI можно воспользоваться следующей:
+       Net profit
+ROI =  -----------
+		Investment
+		
+Net profit = Cost of manual testing - Cost of Automation
+Cost of Automation = Framework set up + Scenarios development + Execution (human job) + Result analyzis
+
+       Cost of manual testing - (Framework set up + Scenarios development + Execution + Result analyzis)
+ROI =  	----------------------------------------------------------------------------------------------
+					Framework set up + Scenarios development + Execution + Result analyzis
+					
+					
+E.g. 
+
+Project duration - 5 Years
+
+Manual testing cost: 20 man-hour per week * 5 years * 52 weeks = 5200 man-hours
+Automated tests development cost: 80 man-hours setup framework + 40 man-hours per week scenario development * 0.5 years * 52 = 1120 man-hours
+Automated test execution & result analyzis: 8 man-hours per week * 5 years * 52 = 2080 man-hours
+
+ROI = (5200-(1120+2080))/(1120+2080)= 62.5%

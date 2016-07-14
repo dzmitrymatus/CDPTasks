@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+                <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'> 
+                <!--
+	                NUnit Orange Library [TestSuite Summary] v2.0 | http://relevantcodes.com/nunit-orange-nunit-html-report-generator/ | https://github.com/relevantcodes/
+                    Owners:  Anshoo Arora
+                    Contributor:  Fabien Ruffin
+                    Contributor:  LV Prasad
+                --> 
+	                <head>
+		                <title>NUnit Orange</title>
+		                <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Montserrat' rel='stylesheet' type='text/css' />
+		                <link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' />
+		                <link href='http://relevantcodes.com/Tools/NUnitOrange/bootstrap/bootstrap.min.css' rel='stylesheet' />
+		                <style type='text/css'>
+                            html { overflow-y: scroll; }
+			                body { color: #222; font-family: 'Source Sans Pro', Verdana; font-size: 15px; margin: 0; }
+			                a { color: inherit; text-decoration: none; }
+                            select { font-family: 'Source Sans Pro'; margin-top: -4px; padding: 7px 10px; }
+			                pre { background: none repeat scroll 0 0 #f5f6f8; color: #222; padding: 5px 10px; text-transform: none !important; white-space: pre-wrap; }
+			                #orange-container { margin: 0; width: 100%; }
+			                #header, #dashboard, #filters, #content { width: 100%; }
+			                .header, .dashboard, .content, .filters { margin: 0 auto; width: 1053px; }
+			                /*header*/
+			                #header { margin-bottom: 35px; }
+			                #title { font-size: 14px; margin-top: 30px; }
+                            .title-orange { color: #ef5f3c; font-family: Montserrat; }
+			                .menu { float: right; font-size: 13px; margin-right: 5px; margin-top: -40px; text-transform: uppercase; }
+			                .menu li { cursor: pointer; display: inline-block; font-family: Montserrat; font-size: 12px; list-style: outside none none; margin-right: 5px; padding: 10px 14px 10px 0; }
+                            .selected { color: #ef5f3c; }
+			                /*dashboard*/
+			                #dashboard { background-color: #f9f9f9; border-bottom: 1px solid #ccc; padding: 40px 0; }
+			                #tabs-2 { display: none; }
+			                .summary-item { border: 1px solid #d3dee2; display: inline-block; margin: 10px 17px; padding: 25px; width: 184px; }
+			                .summary-item span { display: block; text-align: center; }
+			                .summary-value { color: #5a5a5a; font-family: Montserrat; font-size: 26px; }
+                            .summary-param { font-size: 14px; }
+			                #summary { float: left; margin: 20px 20px 0 20px; }
+                            #tabs .simple-grey { border: 1px solid #b4bfc3; width: 80%; }
+                            #tabs .simple-grey tr { border-bottom: 1px solid #b4bfc3; }
+                            #tabs .simple-grey th { background-color: #595959; color: #fff !important; }
+                            #tabs .simple-grey td { padding-bottom: 6px; padding-top: 6px; }
+                            #tabs .simple-grey td:first-child { font-weight: 500; }
+                            .last-box { margin-right: 0 !important; }
+			                /*filters*/
+			                .filters { margin-top: 50px; }
+			                .dropdown-menu a { text-transform: none !important; }
+                            /*controls*/
+                            .controls { float: right; margin-right: 8px; }
+			                .dropdown-menu i { font-size: 11px; padding-right: 10px; }
+			                .dropdown-menu div { display: inline-block; width: 24px !important; }
+			                /*content*/
+			                #content { margin: 10px 0 100px; }
+			                .fixtures { max-width: 1053px; }
+			                .fixture-container { border: 1px solid #b4bfc3; cursor: pointer; float: left; margin-bottom: 8px; height: 82px; width: 343px; }
+			                .fixture-name { float: left; font-size: 18px; margin-left: 15px; margin-top: 10px; max-width: 215px; word-break: break-all; }
+			                .fixture-result { border-radius: 0.25em; color: #fff !important; float: right; margin-right: 7px; margin-top: 10px; padding: 2px 9px; text-transform: capitalize !important; }
+                            .fixture-result.fail, .fixture-result.failed, .fixture-result.failure {background-color: #d9534f;}
+                            .fixture-result.pass, .fixture-result.success, .fixture-result.passed {background-color: #5cb85c;}
+			                .fixture-result.error { color: tomato; }
+	                        .fixture-result.warning, .fixture-result.bad, .fixture-result.inconclusive, .fixture-result.error { background-color: #f0ad4e; } 
+	                        .fixture-result.skipped, .fixture-result.not-run, .fixture-result.notrun { background-color: #aaa; }
+			                .fixture-content { cursor: auto !important; display: none; margin-top: 65px; padding-bottom: 30px; }
+			                .is-expanded { border: 1px solid #777; border-top: 2px solid #777; color: #000; height: auto; }
+	                        .has-pre { width: 694px; }
+			                .simple-grey { border-collapse: collapse; margin: 0 auto; text-align: left; width: 95%; }
+	                        .simple-grey tr { border-bottom: 1px solid #e5e5e5; }
+			                .simple-grey th { font-size: 14px; }
+	                        .simple-grey th, .simple-grey td { padding: 8px; text-align: left; }
+	                        .simple-grey td { word-break: break-all; }
+			                .simple-grey td:first-child { min-width: 150px; padding-right: 25px; }
+	                        .simple-grey td:nth-child(2) { min-width: 60px; padding-right: 25px; }
+			                .failed, .passed, .warning, .bad, .inconclusive, .skipped, .invalid, .error, .not-run, .notrun { text-transform: uppercase; font-size: 13px; }
+	                        .failed, .failure { color: red; }
+			                .error { color: tomato; }
+	                        .passed, .success { color: #5cb85c; } 
+	                        .warning, .bad, .inconclusive, .error { color: #f0ad4e; } 
+	                        .skipped, .not-run, .notrun { color: #aaa; }
+			                .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) { background: none repeat scroll 0 0 #edf1f4; border: medium none; border-bottom-right-radius: 0; border-top-right-radius: 0; padding: 11px 18px; }
+			                .transparent { color: #ccc !important; }
+                        </style>
+	                </head>
+	                <body>
+		                <div id='orange-container'>
+			                <div id='header'>
+				                <div class='header'>
+					                <div id='title'>
+						                <i class='fa fa-desktop' style='margin-right:10px;'></i><span>NUnit<span class='title-orange'>Orange.</span></span>
+					                </div>
+					                <div class='menu'>
+						                <ul>
+							                <li><span class='tabs-1 selected'>Quick Summary</span></li>
+							                <li><span class='tabs-2'>Detailed Info</span></li>
+						                </ul>
+					                </div>
+				                </div>
+			                </div>
+			                <div id='dashboard'>
+                                <div class='dashboard'>
+				                    <div id='tabs'>
+					                    <div id='tabs-1'>
+						                    <div class='graphs'>
+							                    <div id='summary'></div>
+							                    <div class='summary-items'>
+					                                <div class='summary-item'>
+						                                <span class='summary-value'>251</span>
+						                                <span class='summary-param'>Total Tests</span>
+					                                </div>
+					                                <div class='summary-item step-filter' title='Toggle this option to filter all tests with Passed status' alt='Toggle this option to filter all tests with Passed status'>
+						                                <span class='summary-value'>183</span>
+						                                <span id='passed-success' class='summary-param'>Passed</span>
+					                                </div>
+					                                <div class='summary-item step-filter last-box' title='Toggle this option to filter all tests with Failed status' alt='Toggle this option to filter all tests with Failed status'>
+						                                <span class='summary-value'>68</span>
+						                                <span id='failed-failure' class='summary-param'>Failed</span>
+					                                </div>
+					                                <div class='summary-item step-filter' title='Toggle this option to filter all tests with Inconclusive or NotRunnable status' alt='Toggle this option to filter all tests with Inconclusive or NotRunnable status'>
+						                                <span class='summary-value'>0</span>
+						                                <span id='inconclusive-notrunnable' class='summary-param'>Inconclusive</span>
+					                                </div>
+					                                <div class='summary-item step-filter' title='Toggle this option to filter all tests with Error status' alt='Toggle this option to filter all tests with Error status'>
+						                                <span class='summary-value'>0</span>
+						                                <span id='error-errors' class='summary-param'>Errors</span>
+					                                </div>
+					                                <div class='summary-item step-filter last-box' title='Toggle this option to filter all tests with Skipped, Ignored or NotRun status' alt='Toggle this option to filter all tests with Skipped, Ignored or NotRun status'>
+						                                <span class='summary-value'>0</span>
+						                                <span id='skipped-ignored-notrun' class='summary-param'>Skipped</span>
+					                                </div>
+                                                </div>
+						                    </div>
+					                    </div>
+					                    <div id='tabs-2'>
+						                    <table class='simple-grey'>
+							                    <thead>
+								                    <tr><th>Param</th><th>Value</th></tr>
+                                                    <tr><td>XML File</td><td>D:\GitHub\CDPTasks\Task4\TestResults\nunit-result.xml</td></tr>
+                                                    <tr><td>Result</td><td>Failed</td></tr>
+								                    <tr><td>Duration</td><td>1.072409</td></tr>
+								                    <tr><td>Name</td><td>NUnitTests.dll</td></tr>
+								                    <tr><td>User</td><td><!--%USER%--></td></tr>
+								                    <tr><td>Machine Name</td><td><!--%MACHINENAME%--></td></tr>
+								                    <tr><td>Platform</td><td><!--%PLATFORM%--></td></tr>
+								                    <tr><td>Os Version</td><td><!--%OSVERSION%--></td></tr>
+								                    <tr><td>CLR Version</td><td><!--%CLRVERSION%--></td></tr>
+								                    <tr><td>NUnit Version</td><td><!--%NUNITVERSION%--></td></tr>
+							                    </thead>
+						                    </table>
+					                    </div>
+				                    </div> 
+                                </div>
+			                </div>
+			                <div id='filters'>
+				                <div class='filters'>
+                                    <div class='filter-message'>
+                                        <span></span>
+                                    </div>
+					                <div class='btn-group'>
+						                <button type='button' class='btn btn-default fixtures-toggle' data-toggle='dropdown' aria-expanded='false'>Filter Fixtures <span class='caret'></span></button>
+						                <ul class='dropdown-menu fixture-filter' role='menu'>
+							                <li><a id='passed-success' href='#'><div><i class='passed transparent fa fa-check'></i></div>Passed</a></li>
+							                <li><a id='failed-failure' href='#'><div><i class='failed transparent fa fa-times'></i></div>Failed</a></li>
+							                <li><a id='error-errors' href='#'><div><i class='error transparent fa fa-exclamation'></i></div>Error</a></li>
+							                <li><a id='inconclusive-notrunnable' href='#'><div><i class='inconclusive transparent fa fa-question'></i></div>Inconclusive</a></li>
+							                <li><a id='skipped-ignored-notrun' href='#'><div><i class='skipped transparent fa fa-angle-double-right'></i></div>Skipped</a></li>
+							                <li class='divider'></li>
+							                <li><a class='clear-all' href='#'>Clear filters</a></li>
+						                </ul>
+					                </div>
+					                <div class='btn-group'>
+						                <button type='button' class='btn btn-default tests-toggle' data-toggle='dropdown' aria-expanded='false' title='Use this dropdown to filter all tests in the selected status. Note: this is only a test-level filter, not fixture-level. Filtering all PASSED tests for example may still show you failed fixtures as all the FAILED tests are hidden from view. This filter will not change the Fixture status upon filtering.' alt='Use this dropdown to filter all tests in the selected status. Note: this is only a test-level filter, not fixture-level. Filtering all PASSED tests for example may still show you failed fixtures as all the FAILED tests are hidden from view. This filter will not change the Fixture status upon filtering.'>Filter Tests <span class='caret'></span></button>
+						                <ul class='dropdown-menu test-filter' role='menu'>
+							                <li><a id='passed-success' href='#'><div><i class='passed transparent fa fa-check'></i></div>Passed</a></li>
+							                <li><a id='failed-failure' href='#'><div><i class='failed transparent fa fa-times'></i></div>Failed</a></li>
+							                <li><a id='error-errors' href='#'><div><i class='error transparent fa fa-exclamation'></i></div>Error</a></li>
+							                <li><a id='inconclusive-notrunnable' href='#'><div><i class='inconclusive transparent fa fa-question'></i></div>Inconclusive</a></li>
+							                <li><a id='skipped-ignored-notrun' href='#'><div><i class='skipped transparent fa fa-angle-double-right'></i></div>Skipped</a></li>
+							                <li class='divider'></li>
+							                <li><a class='clear-all' href='#'>Clear filters</a></li>
+						                </ul>
+					                </div>
+                                    <div class='controls'>
+						                <div class='btn-group'>
+							                <button type='button' class='btn btn-default tests-toggle' data-toggle='dropdown' aria-expanded='false' title='Selecting Accordion will allow only one fixture to be expanded at once. Use this open if you would want to view only one fixture at once.' alt='Selecting Accordion will allow only one fixture to be expanded at once. Use this open if you would want to view only one fixture at once.'>Toggle Action <span class='caret'></span></button>
+							                <ul class='dropdown-menu select-toggle-type accordion' role='menu'>
+								                <li><a class='optAccordion' href='#'><div><i class='fa fa-toggle-on'></i></div>Accordion</a></li>
+                                                <li class='optToggle'><a href='#'><div><i class='fa fa-toggle-off'></i></div>Toggle</a></li>
+							                </ul>
+						                </div>
+                                    </div>
+				                </div>
+			                </div>
+			                <div id='content'>
+				                <div class='content'>
+					                <div class='fixtures'>
+				                        <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>AbsTests</span>
+						<span class='fixture-result failed'>failed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForBadStringValues(" ")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("string")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("0,55")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.5d)</td>
+								<td class='failed'>failed<pre>  Result must be 5.5, but was 6. Input value: 5.5.
+  Expected: 5.5d
+  But was:  6.0d
+ -> at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d)</td>
+								<td class='failed'>failed<pre>  Result must be 5.23, but was 5. Input value: 5.23.
+  Expected: 5.2300000000000004d
+  But was:  5.0d
+ -> at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(0.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-5.34d)</td>
+								<td class='failed'>failed<pre>  Result must be 5.34, but was 5. Input value: -5.34.
+  Expected: 5.3399999999999999d
+  But was:  5.0d
+ -> at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d)</td>
+								<td class='failed'>failed<pre>  Result must be 4.1, but was 4. Input value: -4.1.
+  Expected: 4.0999999999999996d
+  But was:  4.0d
+ -> at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.1d)</td>
+								<td class='failed'>failed<pre>  Result must be 5.1, but was 5. Input value: 5.1.
+  Expected: 5.0999999999999996d
+  But was:  5.0d
+ -> at NUnitTests.Tests.AbsTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 34</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(0)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(int.MaxValue)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("4.0")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Abs(Object a)   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.5")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Abs(Object a)   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.23")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Abs(Object a)   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("0.0")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Abs(Object a)   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.0")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Abs(Object a)   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-5.34")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Abs(Object a)   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.1")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Abs(Object a)   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.1")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Abs(Object a)   at NUnitTests.Tests.AbsTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AbsTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("2147483647")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>AddTests</span>
+						<span class='fixture-result failed'>failed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForBadStringValues(" "," ")</td>
+								<td class='failed'>failed<pre>  Add method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.InvalidCastException>
+ -> at NUnitTests.Tests.AddTests.TestForBadStringValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 51</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("string","onemorestring")</td>
+								<td class='failed'>failed<pre>  Add method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.InvalidCastException>
+ -> at NUnitTests.Tests.AddTests.TestForBadStringValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 51</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("0,55","5t")</td>
+								<td class='failed'>failed<pre>  Add method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.InvalidCastException>
+ -> at NUnitTests.Tests.AddTests.TestForBadStringValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 51</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(4.0d,5.5d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d,0.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d,-5.34d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d,5.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(4,5)</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(0,5)</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4,-5)</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4,5)</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(int.MaxValue,int.MaxValue)</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("4.0","5.5")</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.23","0.0")</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.0","-5.34")</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.1","5.1")</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("4","5")</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("0","5")</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4","-5")</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4","5")</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("2147483647","2147483647")</td>
+								<td class='failed'>failed<pre>System.InvalidCastException : Specified cast is not valid. ->    at CSharpCalculator.Calculator.Add(Object a, Object b)   at NUnitTests.Tests.AddTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\AddTests.cs:line 24</pre></td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>CosTests</span>
+						<span class='fixture-result failed'>failed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForBadStringValues(" ")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("string")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("0,55")</td>
+								<td class='failed'>failed<pre>  Cos method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  null
+ -> at NUnitTests.Tests.CosTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\CosTests.cs:line 51</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.5d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(0.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-5.34d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(0)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(int.MaxValue)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("4.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.23")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("0.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-5.34")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.1")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.1")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("2147483647")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>DivideTests</span>
+						<span class='fixture-result passed'>passed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForDoubleValues(4.0d,5.5d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d,0.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d,-5.34d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d,5.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>isNegativeTests</span>
+						<span class='fixture-result failed'>failed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForDoubleValues(4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.5d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(0.0d)</td>
+								<td class='failed'>failed<pre>  Result must be False, but was True. Input value: 0.
+  Expected: False
+  But was:  True
+ -> at NUnitTests.Tests.isNegativeTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\isNegativeTests.cs:line 34</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-5.34d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(0)</td>
+								<td class='failed'>failed<pre>  Result must be False, but was True. Input value: 0.
+  Expected: False
+  But was:  True
+ -> at NUnitTests.Tests.isNegativeTests.TestForIntValues(Int32 value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\isNegativeTests.cs:line 16</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(int.MaxValue)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("4.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.23")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("0.0")</td>
+								<td class='failed'>failed<pre>  Result must be False, but was True. Input value: '0.0'.
+  Expected: False
+  But was:  True
+ -> at NUnitTests.Tests.isNegativeTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\isNegativeTests.cs:line 43</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-5.34")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.1")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.1")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("0")</td>
+								<td class='failed'>failed<pre>  Result must be False, but was True. Input value: '0'.
+  Expected: False
+  But was:  True
+ -> at NUnitTests.Tests.isNegativeTests.TestForStringIntValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\isNegativeTests.cs:line 25</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("2147483647")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>isPositiveTests</span>
+						<span class='fixture-result passed'>passed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForDoubleValues(4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.5d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(0.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-5.34d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(0)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(int.MaxValue)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("4.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.23")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("0.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-5.34")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.1")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.1")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("2147483647")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>MultiplyTests</span>
+						<span class='fixture-result passed'>passed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForDoubleValues(4.0d,5.5d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d,0.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d,-5.34d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d,5.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>PowTests</span>
+						<span class='fixture-result failed'>failed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForBadStringValues(" "," ")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("string","onemorestring")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("0,55","5t")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(4.0d,5.5d)</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForDoubleValues(Double firstValue, Double secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 33</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d,0.0d)</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForDoubleValues(Double firstValue, Double secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 33</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d,-5.34d)</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForDoubleValues(Double firstValue, Double secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 33</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d,5.1d)</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForDoubleValues(Double firstValue, Double secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 33</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(4,5)</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(0,5)</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4,-5)</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4,5)</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(int.MaxValue,int.MaxValue)</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForIntValues(Int32 firstValue, Int32 secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 15</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("4.0","5.5")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.23","0.0")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.0","-5.34")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.1","5.1")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForStringDoubleValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("4","5")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("0","5")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4","-5")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4","5")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("2147483647","2147483647")</td>
+								<td class='failed'>failed<pre>System.NotFiniteNumberException : Wrong input ->    at CSharpCalculator.Calculator.Pow(Object a, Object b)   at NUnitTests.Tests.PowTests.TestForStringIntValues(String firstValue, String secondValue) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\PowTests.cs:line 24</pre></td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>SinTests</span>
+						<span class='fixture-result failed'>failed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForBadStringValues(" ")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("string")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("0,55")</td>
+								<td class='failed'>failed<pre>  Sin method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  null
+ -> at NUnitTests.Tests.SinTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SinTests.cs:line 51</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.5d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(0.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-5.34d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(0)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(int.MaxValue)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("4.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.23")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("0.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-5.34")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.1")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.1")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("2147483647")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>SqrtTests</span>
+						<span class='fixture-result failed'>failed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForBadStringValues(" ")</td>
+								<td class='failed'>failed<pre>  Sqrt method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.FormatException>
+ -> at NUnitTests.Tests.SqrtTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 51</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("string")</td>
+								<td class='failed'>failed<pre>  Sqrt method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.FormatException>
+ -> at NUnitTests.Tests.SqrtTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 51</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("0,55")</td>
+								<td class='failed'>failed<pre>  Sqrt method don't throw exception with bad string values
+  Expected: instance of <System.NotFiniteNumberException>
+  But was:  <System.FormatException>
+ -> at NUnitTests.Tests.SqrtTests.TestForBadStringValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 51</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.5d)</td>
+								<td class='failed'>failed<pre>  Result must be 2.34520787991171, but was 2.44948974278318. Input value: 5.5.
+  Expected: 2.3452078799117149d
+  But was:  2.4494897427831779d
+ -> at NUnitTests.Tests.SqrtTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 34</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d)</td>
+								<td class='failed'>failed<pre>  Result must be 2.28691932520585, but was 2.23606797749979. Input value: 5.23.
+  Expected: 2.2869193252058544d
+  But was:  2.2360679774997898d
+ -> at NUnitTests.Tests.SqrtTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 34</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(0.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-5.34d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.1d)</td>
+								<td class='failed'>failed<pre>  Result must be 2.25831795812724, but was 2.23606797749979. Input value: 5.1.
+  Expected: 2.2583179581272428d
+  But was:  2.2360679774997898d
+ -> at NUnitTests.Tests.SqrtTests.TestForDoubleValues(Double value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 34</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(0)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(int.MaxValue)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("4.0")</td>
+								<td class='failed'>failed<pre>System.FormatException : Input string was not in a correct format. ->    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)   at CSharpCalculator.Calculator.Sqrt(Object a)   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.5")</td>
+								<td class='failed'>failed<pre>System.FormatException : Input string was not in a correct format. ->    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)   at CSharpCalculator.Calculator.Sqrt(Object a)   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.23")</td>
+								<td class='failed'>failed<pre>System.FormatException : Input string was not in a correct format. ->    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)   at CSharpCalculator.Calculator.Sqrt(Object a)   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("0.0")</td>
+								<td class='failed'>failed<pre>System.FormatException : Input string was not in a correct format. ->    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)   at CSharpCalculator.Calculator.Sqrt(Object a)   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.0")</td>
+								<td class='failed'>failed<pre>System.FormatException : Input string was not in a correct format. ->    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)   at CSharpCalculator.Calculator.Sqrt(Object a)   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-5.34")</td>
+								<td class='failed'>failed<pre>System.FormatException : Input string was not in a correct format. ->    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)   at CSharpCalculator.Calculator.Sqrt(Object a)   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.1")</td>
+								<td class='failed'>failed<pre>System.FormatException : Input string was not in a correct format. ->    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)   at CSharpCalculator.Calculator.Sqrt(Object a)   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.1")</td>
+								<td class='failed'>failed<pre>System.FormatException : Input string was not in a correct format. ->    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)   at CSharpCalculator.Calculator.Sqrt(Object a)   at NUnitTests.Tests.SqrtTests.TestForStringDoubleValues(String value) in D:\GitHub\CDPTasks\Task4\NUnitTests\Tests\SqrtTests.cs:line 42</pre></td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("2147483647")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            
+						</table>
+					</div>
+				</div>
+                <div class='fixture-container'>
+					<div class='fixture-head'>
+						<span class='fixture-name'>SubTests</span>
+						<span class='fixture-result passed'>passed</span>
+					</div>
+					<div class='fixture-content'>
+						<table class='simple-grey'>
+							<tr>
+								<th>TestName</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td class='test-name'>TestForBadStringValues(" "," ")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("string","onemorestring")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForBadStringValues("0,55","5t")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(4.0d,5.5d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(5.23d,0.0d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.0d,-5.34d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForDoubleValues(-4.1d,5.1d)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(4,5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(0,5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4,-5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(-4,5)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForIntValues(int.MaxValue,int.MaxValue)</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("4.0","5.5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("5.23","0.0")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.0","-5.34")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringDoubleValues("-4.1","5.1")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("4","5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("0","5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4","-5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("-4","5")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <tr>
+								<td class='test-name'>TestForStringIntValues("2147483647","2147483647")</td>
+								<td class='passed'>passed</td>
+							</tr>
+                            <!--%INSERTTEST%-->
+						</table>
+					</div>
+				</div>
+                <!--%INSERTFIXTURE%-->
+			                        </div>
+                                </div>
+                            </div>
+		                </div>	
+	                </body>
+	                <script type='text/javascript' src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
+	                <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+	                <script src='http://cdnjs.cloudflare.com/ajax/libs/masonry/3.2.2/masonry.pkgd.min.js' type='text/javascript' charset='utf-8'></script>
+	                <script src='http://relevantcodes.com/Tools/NUnitOrange/bootstrap/bootstrap.min.js' type='text/javascript' charset='utf-8'></script>
+	                <script type='text/javascript'>
+                        $(document).ready(function() {
+                            var $container = $('.fixtures').masonry({
+				                columnWidth: 350,
+				                gutter: 1
+			                });
+			                $container.on( 'click', '.fixture-container', function(evt) {
+				                var cls = evt.target.className;
+				                if (cls.indexOf('fixture-container') >= 0 || cls.indexOf('fixture-name') >= 0 || cls.indexOf('fixture-result') >= 0) {
+					                var elm = $(this);
+					                var content = elm.find('.fixture-content');
+					                cls = '';
+					                if (content.is(':visible')) {
+						                elm.removeClass('is-expanded has-pre');
+						                content.hide();
+					                }
+					                else {
+                                        if ($('.select-toggle-type').hasClass('accordion'))
+                                            $('.fixture-container').removeClass('is-expanded has-pre').find('.fixture-content').hide();
+						                if (elm.find('pre').length > 0) cls = 'has-pre';
+						                elm.addClass('is-expanded ' + cls);
+						                content.fadeIn(200);
+					                }
+					                $container.masonry();
+				                }
+			                });
+                            $('.menu li').click(function(evt) {
+				                var elm = $(this).children('span');
+				                if (elm.hasClass('selected'))
+					                return;
+				                $('#' + $('.menu span.selected').removeClass('selected').attr('class')).hide();
+				                $('#' + elm.attr('class')).fadeIn(200); elm.addClass('selected'); 
+			                });
+                            $('.select-toggle-type li').click(function() {
+				                var ul = $('.select-toggle-type');
+				                var elm = $(this);
+				                if (elm.attr('class') == 'optToggle') {
+					                ul.addClass('toggle').removeClass('accordion');
+					                $('.optAccordion').find('i').removeClass('fa-toggle-on').addClass('fa-toggle-off');
+					                elm.find('i').removeClass('fa-toggle-off').addClass('fa-toggle-on');
+				                }
+				                else {
+					                ul.addClass('accordion').removeClass('toggle');
+					                $('.optToggle').find('i').removeClass('fa-toggle-on').addClass('fa-toggle-off');
+					                elm.find('i').removeClass('fa-toggle-off').addClass('fa-toggle-on');
+				                }
+			                });
+			                $('.fixture-filter li').click(function() {
+				                var elm = $(this);
+				                if (elm.find('a').hasClass('clear-all')) { clearFilters(); return; }
+				                var i = elm.find('i');
+				                if (i.hasClass('filter-selected')) { resetCurrent(i); return; }
+				                toggle_i();
+				                i.removeClass('transparent').addClass('filter-selected');
+				                $('.fixture-container').hide();
+				                $('.fixture-result.' + elm.find('a').text().toLowerCase().trim()).closest('.fixture-container').show();
+				                $('.fixtures').masonry();
+			                });
+			                $('.test-filter li').click(function() {
+				                var elm = $(this);
+				                if (elm.find('a').hasClass('clear-all')) { clearFilters(); return; }
+				                var i = elm.find('i');
+				                if (i.hasClass('filter-selected')) { resetCurrent(i); return; }
+				                toggle_i();
+				                i.removeClass('transparent').addClass('filter-selected');
+				                $('tr, .fixture-container').removeClass('filtered').show();
+				                var cls = '.' + elm.find('a').attr('id').replace('-', ',.');
+				                $('td:nth-child(2)').not(cls).closest('.fixture-container tr').addClass('filtered').fadeOut('fast');
+				                $('.fixture-content').filter(function() {
+					                return ($(this).find('tr.filtered').length == $(this).find('tr').length - 1);
+				                }).closest('.fixture-container').hide();
+				                $('.fixtures').masonry();
+			                });
+			                function clearFilters() {
+				                $('tr, .fixture-container').removeClass('filtered').show();
+				                $('.dropdown-menu i').filter(function() {
+					                return $(this).hasClass('filter-selected');
+				                }).removeClass('filter-selected').addClass('transparent');
+				                $('.fixtures').masonry();
+			                }
+			                function resetCurrent(i) {
+				                i.addClass('transparent').removeClass('filter-selected');
+				                $('tr, .fixture-container').removeClass('filtered').show();
+				                $('.fixtures').masonry();
+			                }
+			                function toggle_i() {
+				                $('.dropdown-menu i').filter(function() {
+					                return $(this).hasClass('filter-selected');
+				                }).removeClass('filter-selected').addClass('transparent');
+			                }
+			                $('.select-toggle-type').val('optToggle');
+			                $('.fixture-dropdown').dropdown();
+			                $('.tests-dropdown').dropdown();
+		                });
+                        function writeLog(log) {
+                            $('.filter-message span').text(log);
+                        }
+		                google.load('visualization', '1', {packages:['corechart']});
+		                google.setOnLoadCallback(summary);
+		                function summary() {
+			                var data = google.visualization.arrayToDataTable([ 
+				                ['Fixture Status', 'Count'], 
+				                ['Pass', $('td.passed').length + $('td.success').length], 
+				                ['Fail', $('td.failed').length + $('td.failure').length], 
+				                ['Inconclusive/NotRunnable', $('td.inconclusive').length + $('td.notrunnable').length], 
+				                ['Skipped', $('td.skipped').length + $('td.ignored').length + $('td.not-run').length], 
+				                ['Invalid/Error', $('td.invalid').length + $('td.error').length] 
+			                ]);
+			                var chart = new google.visualization.PieChart(document.getElementById('summary'));
+			                chart.draw(data, { chartArea: {left: 10, 'width': '85%', 'height': '85%'}, 
+						                backgroundColor: { fill:'transparent' }, 
+						                colors: ['forestgreen', 'red', 'orange', '#aaa', 'tomato'], 
+						                pieHole: 0.6, 
+						                pieSliceText: 'value', 
+						                height: 210, 
+						                width: 350 
+					                });}
+                    </script>
+                </html>

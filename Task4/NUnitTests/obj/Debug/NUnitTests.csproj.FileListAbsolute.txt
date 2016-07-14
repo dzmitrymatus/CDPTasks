@@ -1,0 +1,10 @@
+D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\NUnitTests.dll
+D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\NUnitTests.pdb
+D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\Calculator1.dll
+D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\nunit.framework.dll
+D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\nunit.framework.xml
+D:\GitHub\CDPTasks\Task4\NUnitTests\obj\Debug\NUnitTests.dll
+D:\GitHub\CDPTasks\Task4\NUnitTests\obj\Debug\NUnitTests.pdb
+D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\CDPTasks\Task4\NUnitTests\bin\Debug\InputData\InputValues.json
