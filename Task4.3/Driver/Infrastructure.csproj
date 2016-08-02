@@ -7,8 +7,8 @@
     <ProjectGuid>{8218646D-AB81-422E-996C-A553D4FA7A77}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Driver</RootNamespace>
-    <AssemblyName>Driver</AssemblyName>
+    <RootNamespace>Infrastructure</RootNamespace>
+    <AssemblyName>Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
@@ -45,6 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Browsers\Factory\BrowserFactory.cs" />
+    <Compile Include="Browsers\Firefox.cs" />
+    <Compile Include="Browsers\Interface\IBrowser.cs" />
     <Compile Include="DriverInstance\Driver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DriverExtensions\WebDriverExtensions.cs" />
@@ -52,6 +56,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
