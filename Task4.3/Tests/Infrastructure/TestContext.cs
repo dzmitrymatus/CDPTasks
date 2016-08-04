@@ -19,7 +19,7 @@ namespace Tests.Tests
         [OneTimeTearDown]
         public void TearDown()
         {
-            Driver.Instance.Close();
+            Driver.Instance.Dispose();
         }
     }
 }

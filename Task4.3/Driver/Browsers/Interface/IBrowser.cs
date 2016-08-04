@@ -11,6 +11,6 @@ namespace Infrastructure.Browsers.Interface
     public interface IBrowser
     {
         IWebDriver Instance { get; }
-        DesiredCapabilities Capabilities { get; }
+        DesiredCapabilities Capabilities(bool sauceLabs = false, bool grid = false);
     }
 }

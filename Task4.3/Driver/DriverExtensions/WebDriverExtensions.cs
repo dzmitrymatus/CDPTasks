@@ -1,6 +1,9 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
 using Infrastructure.DriverInstance;
+using System;
+using OpenQA.Selenium.Remote;
 
 namespace Infrastructure.DriverExtensions
 {
@@ -28,9 +31,15 @@ namespace Infrastructure.DriverExtensions
             actions.ClickAndHold(element).MoveToElement(destinationElement).Release(destinationElement).Perform();
         }
 
-        public static void CustomClick(this IWebElement element)
+        public static void CustomClickWithWait(this IWebElement element, int maxWaitTime = 90)
         {
+            var url = Driver.Instance.Url;
+
             Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].click()", element);
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(maxWaitTime));
+            wait.Until((x) => x.Url != url);
+            wait.Until((x) => Driver.JavaScriptExecutor.ExecuteScript("return document.readyState").ToString().Equals("complete"));
+
         }
 
         public static void CustomHideElement(this IWebElement element)

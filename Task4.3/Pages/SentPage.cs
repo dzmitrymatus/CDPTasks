@@ -11,7 +11,7 @@ namespace Pages
         #region Private Members
         private const string Url = "https://e.mail.ru/messages/sent/";
 
-        [FindsBy(How = How.CssSelector, Using = "div.compose__header__field__box")]
+        [FindsBy(How = How.CssSelector, Using = "[data-name='remove']")]
         private IWebElement DeleteButton;
         private readonly By CheckboxSelector = By.CssSelector(".js-item-checkbox.b-datalist__item__cbx");
         private const string MailSelectorTemplate = "a[title='{0}'][data-subject='{1}']";
@@ -36,8 +36,7 @@ namespace Pages
         public void DeleteMail(string user, string subject)
         {
             driver.FindElement(By.CssSelector(MailSelector.Invoke(user, subject))).FindElement(CheckboxSelector).Click();
-            Actions builder = new Actions(driver);
-            builder.SendKeys(Keys.Delete).Perform();
+            DeleteButton.Click();
         }
         #endregion
     }

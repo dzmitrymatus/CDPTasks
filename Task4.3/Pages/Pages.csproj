@@ -55,7 +55,7 @@
     <Compile Include="NewMailPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SentPage.cs" />
-    <Compile Include="StartPage.cs" />
+    <Compile Include="LoginPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

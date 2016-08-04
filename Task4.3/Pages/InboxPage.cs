@@ -8,10 +8,10 @@ namespace Pages
     {
         #region Private Members
         private const string Url = "https://e.mail.ru/messages/inbox/";
-        private readonly By FirstMessage = By.CssSelector("[data-bem = 'b-datalist__item']");
-        private readonly By DestinationElement = By.CssSelector("[data-mnemo = 'drafts']");
+        private readonly By FirstMessage = By.CssSelector("[data-bem='b-datalist__item']");
+        private readonly By DestinationElement = By.CssSelector("[data-mnemo='drafts']");
 
-        [FindsBy(How = How.CssSelector, Using = "[data-name = 'compose']")]
+        [FindsBy(How = How.CssSelector, Using = "[data-name='compose']")]
         private IWebElement NewMessageButton;
         #endregion
 

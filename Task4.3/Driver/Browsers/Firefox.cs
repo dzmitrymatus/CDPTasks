@@ -2,7 +2,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
-using System.Configuration;
 
 namespace Infrastructure.Browsers
 {
@@ -10,20 +9,26 @@ namespace Infrastructure.Browsers
     {
         public IWebDriver Instance
         {
-            get { return new FirefoxDriver(); }
-        }
-
-        public DesiredCapabilities Capabilities
-        {
             get
             {
-                var browser = DesiredCapabilities.Firefox();
-                var user = ConfigurationManager.AppSettings["SauceLabsUser"];
-                var key = ConfigurationManager.AppSettings["SauceLabsKey"];
-                browser.SetCapability("username", user);
-                browser.SetCapability("accessKey", key);
-                return browser;
+                FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
+                service.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
+                return new FirefoxDriver(service);
             }
+        }
+
+        public DesiredCapabilities Capabilities(bool sauceLabs, bool grid)
+        {
+            var capabilities = DesiredCapabilities.Firefox();
+            if (sauceLabs)
+            {
+
+            }
+            if (grid)
+            {
+                capabilities.SetCapability("marionette", true);
+            }
+            return capabilities;
         }
     }
 }

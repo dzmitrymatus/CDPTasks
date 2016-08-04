@@ -11,8 +11,8 @@ namespace Infrastructure.Browsers.Factory
         static BrowserFactory()
         {
             browsers.Add("firefox", () => new Firefox());
-            //drivers.Add("chrome", () => new Firefox());
-            //drivers.Add("opera", () => new Firefox());
+            browsers.Add("chrome", () => new Chrome());
+            browsers.Add("ie", () => new InternetExplorer());
         }
 
         public static IBrowser GetBrowser(string name)

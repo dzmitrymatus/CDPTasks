@@ -26,18 +26,24 @@ namespace Infrastructure.DriverInstance
         public static RemoteWebDriver CreateDriver()
         {
             var browser = BrowserFactory.GetBrowser(ConfigurationManager.AppSettings["Browser"]);
-
             var useSauceLabs = bool.Parse(ConfigurationManager.AppSettings["UseSauceLabs"]);
+            var useSeleniumGrid = bool.Parse(ConfigurationManager.AppSettings["UseSeleniumGrid"]);
+
+            var capabilities = browser.Capabilities(useSauceLabs, useSeleniumGrid);
+
             if (useSauceLabs)
             {
-                return new RemoteWebDriver(new Uri($"http://ondemand.saucelabs.com:80/wd/hub"), browser.Capabilities);
+                var user = ConfigurationManager.AppSettings["SauceLabsUser"];
+                var key = ConfigurationManager.AppSettings["SauceLabsKey"];
+                capabilities.SetCapability("username", user);
+                capabilities.SetCapability("accessKey", key);
+                return new RemoteWebDriver(new Uri($"http://ondemand.saucelabs.com:80/wd/hub"), capabilities);
             }
 
-            var useSeleniumGrid = bool.Parse(ConfigurationManager.AppSettings["UseSeleniumGrid"]);
             if (useSeleniumGrid)
             {
                 var url = new Uri(ConfigurationManager.AppSettings["HubUrl"]);
-                return new RemoteWebDriver(url, browser.Capabilities);
+                return new RemoteWebDriver(url, capabilities);
             }
             return (RemoteWebDriver)browser.Instance;
         }

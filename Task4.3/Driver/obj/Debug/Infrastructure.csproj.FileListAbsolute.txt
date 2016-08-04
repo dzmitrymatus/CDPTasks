@@ -4,4 +4,5 @@ D:\GitHub\CDPTasks\Task4.3\Driver\bin\Debug\Infrastructure.dll
 D:\GitHub\CDPTasks\Task4.3\Driver\bin\Debug\Infrastructure.pdb
 D:\GitHub\CDPTasks\Task4.3\Driver\obj\Debug\Infrastructure.dll
 D:\GitHub\CDPTasks\Task4.3\Driver\obj\Debug\Infrastructure.pdb
-D:\GitHub\CDPTasks\Task4.3\Driver\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+D:\GitHub\CDPTasks\Task4.3\Driver\bin\Debug\WebDriver.Support.dll
+D:\GitHub\CDPTasks\Task4.3\Driver\bin\Debug\WebDriver.Support.xml

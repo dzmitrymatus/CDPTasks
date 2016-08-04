@@ -20,15 +20,15 @@ namespace Tests.Tests
         [TestCase]
         public void CreateNewMail()
         {
-            var startPage = new StartPage(Driver.Instance);
-            startPage.Navigate();
-            var inboxPage = startPage.Login(Login, Password);
-            Thread.Sleep(2000);
+            var loginPage = new LoginPage(Driver.Instance);
+            loginPage.Navigate();
+            var inboxPage = loginPage.Login(Login, Password);
             Assert.That(Driver.Instance.Url.Contains("https://e.mail.ru/messages/inbox/"), $"Bad login =(  {Driver.Instance.Url}");
 
             //inboxPage.MoveMessageToDraftsFolder();
 
-            var newMailPage = inboxPage.NavigateToNewMailPage();
+            var newMailPage = new NewMailPage(Driver.Instance);
+            newMailPage.Navigate();
             newMailPage.FillTo(EMailAdress);
             newMailPage.FillSubject(Subject);
             newMailPage.FillMessage(Message);

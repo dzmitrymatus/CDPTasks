@@ -11,12 +11,15 @@ namespace Pages
     {
         #region Private Members
         private const string Url = "https://e.mail.ru/compose";
+        private const string MessageInputId = "tinymce";
 
+        [FindsBy(How = How.XPath, Using = @"//textarea[@data-original-name='To']")]
+        private IWebElement ToInput;
         [FindsBy(How = How.XPath, Using = @"//div[@class='compose__header__content']/div[2]/div[2]")]
         private IWebElement ToInputText;
         [FindsBy(How = How.XPath, Using = @"//input[@name='Subject']")]
         private IWebElement SubjectInput;
-        [FindsBy(How = How.XPath, Using = @"//td[contains(@class,'mceIframeContainer')]/iframe")]
+        [FindsBy(How = How.CssSelector, Using = ".mceIframeContainer iframe")]
         private IWebElement MessageInputFrame;
         [FindsBy(How = How.Id, Using = "tinymce")]
         private IWebElement MessageInput;
@@ -32,6 +35,8 @@ namespace Pages
         private IWebElement IdInput;
         [FindsBy(How = How.CssSelector, Using = "div.message-sent__title")]
         private IWebElement SendStatusTextBox;
+
+
         #endregion
 
         #region Constructors
@@ -46,16 +51,13 @@ namespace Pages
 
         public void FillTo(string emailAdress)
         {
-            Actions action = new Actions(this.driver);
-            action.MoveToElement(ToInputText, 15, 15);
-            action.Click();
-            action.SendKeys(emailAdress);
-            action.Perform();
-            action.Click().Perform();
+            Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].value = '{emailAdress}'", ToInput);
         }
 
         public string GetTo()
         {
+            WebDriverWait wait = new WebDriverWait(this.driver, TimeSpan.FromSeconds(15));
+            wait.Until(x => ToInputText.Text != string.Empty);
             return ToInputText.Text;
         }
 
@@ -66,15 +68,14 @@ namespace Pages
 
         public string GetSubject()
         {
-            return SubjectInput.GetAttribute("value");
+            WebDriverWait wait = new WebDriverWait(this.driver, TimeSpan.FromSeconds(15));
+            wait.Until(x => (string)(Driver.JavaScriptExecutor.ExecuteScript($" return arguments[0].value", SubjectInput)) != string.Empty);
+            return (string)(Driver.JavaScriptExecutor.ExecuteScript($" return arguments[0].value", SubjectInput));
         }
 
         public void FillMessage(string message)
         {
-            this.driver.SwitchTo().Frame(MessageInputFrame);
-            MessageInput.Clear();
-            MessageInput.SendKeys(message);
-            driver.SwitchTo().DefaultContent();
+            Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].contentWindow.document.getElementById('{MessageInputId}').innerHTML = '{message}'", MessageInputFrame);
         }
 
         public string GetMessage()
