@@ -12,7 +12,7 @@ namespace Infrastructure.Browsers
             get { return new ChromeDriver(); }
         }
 
-        public DesiredCapabilities Capabilities(bool sauceLabs, bool grid)
+        public DesiredCapabilities Capabilities(bool sauceLabs, bool grid, string nodePlatform)
         {
                 return DesiredCapabilities.Chrome();
         }

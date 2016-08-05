@@ -28,8 +28,9 @@ namespace Infrastructure.DriverInstance
             var browser = BrowserFactory.GetBrowser(ConfigurationManager.AppSettings["Browser"]);
             var useSauceLabs = bool.Parse(ConfigurationManager.AppSettings["UseSauceLabs"]);
             var useSeleniumGrid = bool.Parse(ConfigurationManager.AppSettings["UseSeleniumGrid"]);
+            var nodePlatform = ConfigurationManager.AppSettings["NodePlatform"];
 
-            var capabilities = browser.Capabilities(useSauceLabs, useSeleniumGrid);
+            var capabilities = browser.Capabilities(useSauceLabs, useSeleniumGrid, nodePlatform);
 
             if (useSauceLabs)
             {
@@ -43,6 +44,8 @@ namespace Infrastructure.DriverInstance
             if (useSeleniumGrid)
             {
                 var url = new Uri(ConfigurationManager.AppSettings["HubUrl"]);
+
+
                 return new RemoteWebDriver(url, capabilities);
             }
             return (RemoteWebDriver)browser.Instance;

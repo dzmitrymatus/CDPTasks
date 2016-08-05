@@ -14,7 +14,7 @@ namespace Infrastructure.Browsers
             get { return new InternetExplorerDriver(); }
         }
 
-        public DesiredCapabilities Capabilities(bool sauceLabs, bool grid)
+        public DesiredCapabilities Capabilities(bool sauceLabs, bool grid, string nodePlatform)
         {
                 DesiredCapabilities caps = DesiredCapabilities.InternetExplorer();
                 caps.SetCapability("platform", Platform);

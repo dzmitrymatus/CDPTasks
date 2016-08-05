@@ -17,16 +17,20 @@ namespace Infrastructure.Browsers
             }
         }
 
-        public DesiredCapabilities Capabilities(bool sauceLabs, bool grid)
+        public DesiredCapabilities Capabilities(bool sauceLabs, bool grid, string nodePlatform)
         {
             var capabilities = DesiredCapabilities.Firefox();
+
             if (sauceLabs)
             {
 
             }
             if (grid)
             {
-                capabilities.SetCapability("marionette", true);
+                if (nodePlatform == "windows")
+                {
+                    capabilities.SetCapability("marionette", true);
+                }
             }
             return capabilities;
         }
