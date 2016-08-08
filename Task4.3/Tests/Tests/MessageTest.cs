@@ -48,7 +48,9 @@ namespace Tests.Tests
 
             var sentPage = new SentPage(Driver.Instance);
             sentPage.Navigate();
-            Assert.That(sentPage.HasMail(EMailAdress, Subject), "Sent folder don't contain Message");
+            var hasMail = sentPage.HasMail(EMailAdress, Subject);
+            var mailTitle = sentPage.HoverOnMail(EMailAdress, Subject);
+            Assert.That(hasMail && mailTitle == EMailAdress, "Sent folder don't contain Message");
 
             sentPage.DeleteMail(EMailAdress, Subject);
             sentPage.LogOut();

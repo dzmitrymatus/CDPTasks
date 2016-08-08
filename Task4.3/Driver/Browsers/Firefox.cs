@@ -11,9 +11,10 @@ namespace Infrastructure.Browsers
         {
             get
             {
-                FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
-                service.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
-                return new FirefoxDriver(service);
+                //FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
+                //service.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
+                //return new FirefoxDriver(service);
+                return new FirefoxDriver();
             }
         }
 
