@@ -1,0 +1,5 @@
+D:\GitHub\CDPTasks\Task5.1\BusinessObjects\bin\Debug\BusinessObjects.dll
+D:\GitHub\CDPTasks\Task5.1\BusinessObjects\bin\Debug\BusinessObjects.pdb
+D:\GitHub\CDPTasks\Task5.1\BusinessObjects\obj\Debug\BusinessObjects.csprojResolveAssemblyReference.cache
+D:\GitHub\CDPTasks\Task5.1\BusinessObjects\obj\Debug\BusinessObjects.dll
+D:\GitHub\CDPTasks\Task5.1\BusinessObjects\obj\Debug\BusinessObjects.pdb
