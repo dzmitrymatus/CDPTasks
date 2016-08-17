@@ -1,9 +1,9 @@
-﻿using Infrastructure.Browsers.Interface;
+﻿using WebDriver.Browsers.Interface;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
 
-namespace Infrastructure.Browsers
+namespace WebDriver.Browsers
 {
     public class Firefox : IBrowser
     {

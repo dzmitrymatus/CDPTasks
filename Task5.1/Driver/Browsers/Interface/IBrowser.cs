@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Browsers.Interface
+namespace WebDriver.Browsers.Interface
 {
     public interface IBrowser
     {

@@ -1,9 +1,8 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
-using Infrastructure.DriverInstance;
+using WebDriver.DriverInstance;
 
 namespace Pages
 {

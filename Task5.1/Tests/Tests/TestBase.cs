@@ -1,14 +1,14 @@
-﻿using Infrastructure.DriverInstance;
+﻿using WebDriver.DriverInstance;
 using NUnit.Framework;
 using System;
 using System.IO;
 
 namespace Tests.Tests
 {
-    [SetUpFixture]
-    public class TestContext
+    [TestFixture]
+    public class TestBase
     {
-        [OneTimeSetUp]
+        [SetUp]
         public void SetUp()
         {
             Directory.SetCurrentDirectory(NUnit.Framework.TestContext.CurrentContext.TestDirectory);
@@ -16,10 +16,10 @@ namespace Tests.Tests
             Driver.Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
         }
 
-        [OneTimeTearDown]
+        [TearDown]
         public void TearDown()
         {
-            Driver.Instance.Dispose();
+            Driver.CloseDriver();
         }
     }
 }

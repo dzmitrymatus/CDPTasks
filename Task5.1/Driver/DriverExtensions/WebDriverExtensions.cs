@@ -1,11 +1,10 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
-using Infrastructure.DriverInstance;
+using WebDriver.DriverInstance;
 using System;
-using OpenQA.Selenium.Remote;
 
-namespace Infrastructure.DriverExtensions
+namespace WebDriver.DriverExtensions
 {
     public static class WebDriverExtensions
     {

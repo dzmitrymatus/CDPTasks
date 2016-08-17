@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ConfigurationManager;
 
 namespace BusinessObjects.User
 {
@@ -11,14 +7,12 @@ namespace BusinessObjects.User
     {
         public static User CreateUserFromConfig()
         {
-            var login = ConfigurationManager.AppSettings["Login"];
-            var password = ConfigurationManager.AppSettings["Password"];
-            if(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
+            if(string.IsNullOrEmpty(Configuration.Login) || string.IsNullOrEmpty(Configuration.Password))
             {
                 throw new Exception("Config file don't contain user data");
             }
 
-            return new User(login, password);
+            return new User(Configuration.Login, Configuration.Password);
         }
     }
 }

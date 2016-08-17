@@ -11,12 +11,14 @@ D:\GitHub\CDPTasks\Task4.3\Pages\bin\Debug\Infrastructure.dll
 D:\GitHub\CDPTasks\Task4.3\Pages\bin\Debug\Infrastructure.pdb
 D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\Pages.dll
 D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\Pages.pdb
-D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\Infrastructure.dll
 D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\WebDriver.dll
 D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\WebDriver.Support.dll
-D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\Infrastructure.pdb
 D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\WebDriver.xml
 D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\WebDriver.Support.xml
 D:\GitHub\CDPTasks\Task5.1\Pages\obj\Debug\Pages.csprojResolveAssemblyReference.cache
 D:\GitHub\CDPTasks\Task5.1\Pages\obj\Debug\Pages.dll
 D:\GitHub\CDPTasks\Task5.1\Pages\obj\Debug\Pages.pdb
+D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\MyWebDriver.dll
+D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\ConfigurationManager.dll
+D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\MyWebDriver.pdb
+D:\GitHub\CDPTasks\Task5.1\Pages\bin\Debug\ConfigurationManager.pdb

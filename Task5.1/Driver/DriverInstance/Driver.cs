@@ -1,41 +1,65 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
 using System;
-using System.Configuration;
-using Infrastructure.Browsers.Interface;
-using Infrastructure.Browsers;
-using Infrastructure.Browsers.Factory;
+using WebDriver.Browsers.Factory;
 using OpenQA.Selenium.Remote;
+using ConfigurationManager;
 
-namespace Infrastructure.DriverInstance
+namespace WebDriver.DriverInstance
 {
     public class Driver
     {
-        private static Lazy<RemoteWebDriver> driver = new Lazy<RemoteWebDriver>(() => CreateDriver());
+        #region Private members 
+        private static volatile RemoteWebDriver driver;
+        private static readonly object syncObject = new object();
+        #endregion
 
+        #region Public fields
         public static RemoteWebDriver Instance
         {
-            get { return driver.Value; }
+            get
+            {
+                if(driver == null)
+                {
+                    lock(syncObject)
+                    {
+                        if(driver == null)
+                        {
+                            driver = CreateDriver();
+                        }
+                    }
+                }
+                return driver;
+            }
         }
 
         public static IJavaScriptExecutor JavaScriptExecutor
         {
-            get { return driver.Value as IJavaScriptExecutor; }
+            get { return Instance as IJavaScriptExecutor; }
         }
+        #endregion
 
-        public static RemoteWebDriver CreateDriver()
+        #region Public methods
+        public static void CloseDriver()
         {
-            var browser = BrowserFactory.GetBrowser(ConfigurationManager.AppSettings["Browser"]);
-            var useSauceLabs = bool.Parse(ConfigurationManager.AppSettings["UseSauceLabs"]);
-            var useSeleniumGrid = bool.Parse(ConfigurationManager.AppSettings["UseSeleniumGrid"]);
-            var nodePlatform = ConfigurationManager.AppSettings["NodePlatform"];
+            driver.Dispose();
+            driver = null;
+        }
+        #endregion
+
+        #region Private methods
+        private static RemoteWebDriver CreateDriver()
+        {
+            var browser = BrowserFactory.GetBrowser(Configuration.Browser);
+            var useSauceLabs = Configuration.UseSauceLabs;
+            var useSeleniumGrid = Configuration.UseSeleniumGrid;
+            var nodePlatform = Configuration.NodePlatform;
 
             var capabilities = browser.Capabilities(useSauceLabs, useSeleniumGrid, nodePlatform);
 
             if (useSauceLabs)
             {
-                var user = ConfigurationManager.AppSettings["SauceLabsUser"];
-                var key = ConfigurationManager.AppSettings["SauceLabsKey"];
+                var user = Configuration.SauceLabsUser;
+                var key = Configuration.SauceLabsKey;
                 capabilities.SetCapability("username", user);
                 capabilities.SetCapability("accessKey", key);
                 return new RemoteWebDriver(new Uri($"http://ondemand.saucelabs.com:80/wd/hub"), capabilities);
@@ -43,10 +67,11 @@ namespace Infrastructure.DriverInstance
 
             if (useSeleniumGrid)
             {
-                var url = new Uri(ConfigurationManager.AppSettings["HubUrl"]);
+                var url = new Uri(Configuration.HubUrl);
                 return new RemoteWebDriver(url, capabilities);
             }
             return (RemoteWebDriver)browser.Instance;
         }
+        #endregion
     }
 }

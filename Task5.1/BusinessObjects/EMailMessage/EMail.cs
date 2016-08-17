@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessObjects.EMailMessage
 {
     public class EMail
     {
+        #region Private members
         private string emailAdress;
         private string message;
         private string subject;
+        #endregion
 
+        #region Constructors
         public EMail()
         {
             emailAdress = "dzmitry.matus@gmail.com";
@@ -25,7 +24,9 @@ namespace BusinessObjects.EMailMessage
             this.message = message;
             this.subject = subject;
         }
+        #endregion
 
+        #region Public fields
         public string EMailAdress
         {
             get { return emailAdress; }
@@ -40,6 +41,6 @@ namespace BusinessObjects.EMailMessage
         {
             get { return subject; }
         }
-
+        #endregion
     }
 }

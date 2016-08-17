@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using Infrastructure.DriverExtensions;
+using WebDriver.DriverExtensions;
 using System;
 
 namespace Pages

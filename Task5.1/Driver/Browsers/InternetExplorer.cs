@@ -1,9 +1,9 @@
-﻿using Infrastructure.Browsers.Interface;
+﻿using WebDriver.Browsers.Interface;
 using OpenQA.Selenium;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 
-namespace Infrastructure.Browsers
+namespace WebDriver.Browsers
 {
     public class InternetExplorer : IBrowser
     {

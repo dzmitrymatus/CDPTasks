@@ -1,8 +1,6 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Pages;
-using Infrastructure.DriverInstance;
-using System.Threading;
+using WebDriver.DriverInstance;
 using BusinessObjects.User;
 using BusinessObjects.EMailMessage;
 
@@ -10,7 +8,7 @@ namespace Tests.Tests
 {
     [TestFixture]
     [Author("Dzmitry Matus", "dzmitry_matus@epam.com")]
-    public class MessageTest
+    public class MessageTest: TestBase
     {        
 
         [TestCase]
