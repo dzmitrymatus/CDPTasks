@@ -32,5 +32,5 @@ D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\WebDriver.xml
 D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\WebDriver.Support.xml
 D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\ConfigurationManager.dll
 D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\ConfigurationManager.pdb
-D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\MyWebDriver.dll
-D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\MyWebDriver.pdb
+D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\WebDriverManager.dll
+D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\WebDriverManager.pdb

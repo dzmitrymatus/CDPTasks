@@ -1,10 +1,10 @@
 ﻿using OpenQA.Selenium;
 using System;
-using WebDriver.Browsers.Factory;
+using WebDriverManager.Browsers.Factory;
 using OpenQA.Selenium.Remote;
 using ConfigurationManager;
 
-namespace WebDriver.DriverInstance
+namespace WebDriverManager.DriverInstance
 {
     public class Driver
     {
@@ -18,11 +18,11 @@ namespace WebDriver.DriverInstance
         {
             get
             {
-                if(driver == null)
+                if (driver == null)
                 {
-                    lock(syncObject)
+                    lock (syncObject)
                     {
-                        if(driver == null)
+                        if (driver == null)
                         {
                             driver = CreateDriver();
                         }
@@ -31,18 +31,13 @@ namespace WebDriver.DriverInstance
                 return driver;
             }
         }
-
-        public static IJavaScriptExecutor JavaScriptExecutor
-        {
-            get { return Instance as IJavaScriptExecutor; }
-        }
         #endregion
 
         #region Public methods
         public static void CloseDriver()
         {
-            driver.Dispose();
-            driver = null;
+                driver.Dispose();
+                driver = null;
         }
         #endregion
 

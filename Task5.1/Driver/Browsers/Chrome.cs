@@ -1,9 +1,9 @@
-﻿using WebDriver.Browsers.Interface;
+﻿using WebDriverManager.Browsers.Interface;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
 
-namespace WebDriver.Browsers
+namespace WebDriverManager.Browsers
 {
     public class Chrome : IBrowser
     {

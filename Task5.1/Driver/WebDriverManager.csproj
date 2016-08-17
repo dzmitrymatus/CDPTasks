@@ -7,8 +7,8 @@
     <ProjectGuid>{8218646D-AB81-422E-996C-A553D4FA7A77}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebDriver</RootNamespace>
-    <AssemblyName>MyWebDriver</AssemblyName>
+    <RootNamespace>WebDriverManager</RootNamespace>
+    <AssemblyName>WebDriverManager</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

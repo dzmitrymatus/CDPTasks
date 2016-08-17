@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using WebDriver.DriverExtensions;
-using WebDriver.DriverInstance;
+using WebDriverManager.DriverExtensions;
 
 namespace Pages
 {
@@ -49,13 +48,13 @@ namespace Pages
         public void FillLogin(string login)
         {
             LoginInput.Clear();
-            Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].value = '{login}'", LoginInput);
+            (driver as IJavaScriptExecutor).ExecuteScript($"arguments[0].value = '{login}'", LoginInput);
         }
 
         public void FillPassword(string password)
         {
             PasswordInput.Clear();
-            Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].value = '{password}'", PasswordInput);
+            (driver as IJavaScriptExecutor).ExecuteScript($"arguments[0].value = '{password}'", PasswordInput);
         }
         #endregion
     }

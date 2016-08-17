@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Pages;
-using WebDriver.DriverInstance;
+using WebDriverManager.DriverInstance;
 using BusinessObjects.User;
 using BusinessObjects.EMailMessage;
 

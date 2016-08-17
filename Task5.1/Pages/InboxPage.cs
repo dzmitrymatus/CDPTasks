@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using WebDriver.DriverExtensions;
+using WebDriverManager.DriverExtensions;
 
 namespace Pages
 {

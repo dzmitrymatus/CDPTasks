@@ -1,4 +1,4 @@
-﻿using WebDriver.DriverInstance;
+﻿using WebDriverManager.DriverInstance;
 using NUnit.Framework;
 using System;
 using System.IO;

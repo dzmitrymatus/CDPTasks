@@ -1,8 +1,8 @@
-﻿using WebDriver.Browsers.Interface;
+﻿using WebDriverManager.Browsers.Interface;
 using System;
 using System.Collections.Generic;
 
-namespace WebDriver.Browsers.Factory
+namespace WebDriverManager.Browsers.Factory
 {
     public static class BrowserFactory
     {

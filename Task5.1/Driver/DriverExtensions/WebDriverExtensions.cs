@@ -1,10 +1,11 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
-using WebDriver.DriverInstance;
 using System;
+using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Internal;
 
-namespace WebDriver.DriverExtensions
+namespace WebDriverManager.DriverExtensions
 {
     public static class WebDriverExtensions
     {
@@ -26,39 +27,57 @@ namespace WebDriver.DriverExtensions
     {
         public static void CustomDragAndDrop(this IWebElement element, IWebElement destinationElement)
         {
-            Actions actions = new Actions(Driver.Instance);
+            IWebDriver driver = GetWebDriver(element);
+            Actions actions = new Actions(driver);
             actions.ClickAndHold(element).MoveToElement(destinationElement).Release(destinationElement).Perform();
         }
 
         public static void CustomClickWithWait(this IWebElement element, int maxWaitTime = 90)
         {
-            var url = Driver.Instance.Url;
+            IWebDriver driver = GetWebDriver(element);
+            var url = driver.Url;
 
-            Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].click()", element);
-            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(maxWaitTime));
+            (driver as IJavaScriptExecutor).ExecuteScript($"arguments[0].click()", element);
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(maxWaitTime));
             wait.Until((x) => x.Url != url);
-            wait.Until((x) => Driver.JavaScriptExecutor.ExecuteScript("return document.readyState").ToString().Equals("complete"));
+            wait.Until((x) => (driver as IJavaScriptExecutor).ExecuteScript("return document.readyState").ToString().Equals("complete"));
 
         }
 
         public static void CustomHideElement(this IWebElement element)
         {
-            var display = Driver.JavaScriptExecutor.ExecuteScript($"return arguments[0].style.display", element) as string;
+            IWebDriver driver = GetWebDriver(element);
+            var display = (driver as IJavaScriptExecutor).ExecuteScript($"return arguments[0].style.display", element) as string;
 
             if (display != "none")
             {
-                Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].style.display = 'none' ", element);
+                (driver as IJavaScriptExecutor).ExecuteScript($"arguments[0].style.display = 'none' ", element);
             }
         }
 
         public static void CustomShowElement(this IWebElement element)
         {
-            var display = Driver.JavaScriptExecutor.ExecuteScript($"return arguments[0].style.display", element) as string;
+            IWebDriver driver = GetWebDriver(element);
+            var display = (driver as IJavaScriptExecutor).ExecuteScript($"return arguments[0].style.display", element) as string;
 
             if (display != "")
             {
-                Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].style.display = '' ", element);
+                (driver as IJavaScriptExecutor).ExecuteScript($"arguments[0].style.display = '' ", element);
             }
+        }
+
+        private static IWebDriver GetWebDriver(IWebElement element)
+        {
+            IWebDriver driver;
+            try
+            {
+                driver = (element as RemoteWebElement).WrappedDriver;
+            }
+            catch
+            {
+                driver = ((element as IWrapsElement).WrappedElement as RemoteWebElement).WrappedDriver;
+            }
+            return driver;
         }
 
     }

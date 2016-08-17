@@ -2,7 +2,6 @@
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
-using WebDriver.DriverInstance;
 
 namespace Pages
 {
@@ -50,7 +49,7 @@ namespace Pages
 
         public void FillTo(string emailAdress)
         {
-            Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].value = '{emailAdress}'", ToInput);
+            (driver as IJavaScriptExecutor).ExecuteScript($"arguments[0].value = '{emailAdress}'", ToInput);
         }
 
         public string GetTo()
@@ -62,19 +61,19 @@ namespace Pages
 
         public void FillSubject(string subject)
         {
-            Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].value = '{subject}'", SubjectInput);
+            (driver as IJavaScriptExecutor).ExecuteScript($"arguments[0].value = '{subject}'", SubjectInput);
         }
 
         public string GetSubject()
         {
             WebDriverWait wait = new WebDriverWait(this.driver, TimeSpan.FromSeconds(15));
-            wait.Until(x => (string)(Driver.JavaScriptExecutor.ExecuteScript($" return arguments[0].value", SubjectInput)) != string.Empty);
-            return (string)(Driver.JavaScriptExecutor.ExecuteScript($" return arguments[0].value", SubjectInput));
+            wait.Until(x => (string)((driver as IJavaScriptExecutor).ExecuteScript($" return arguments[0].value", SubjectInput)) != string.Empty);
+            return (string)((driver as IJavaScriptExecutor).ExecuteScript($" return arguments[0].value", SubjectInput));
         }
 
         public void FillMessage(string message)
         {
-            Driver.JavaScriptExecutor.ExecuteScript($"arguments[0].contentWindow.document.getElementById('{MessageInputId}').innerHTML = '{message}'", MessageInputFrame);
+            (driver as IJavaScriptExecutor).ExecuteScript($"arguments[0].contentWindow.document.getElementById('{MessageInputId}').innerHTML = '{message}'", MessageInputFrame);
         }
 
         public string GetMessage()
