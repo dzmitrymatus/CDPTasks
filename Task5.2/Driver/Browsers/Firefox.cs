@@ -1,0 +1,39 @@
+﻿using WebDriverManager.Browsers.Interface;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Remote;
+
+namespace WebDriverManager.Browsers
+{
+    public class Firefox : IBrowser
+    {
+        public IWebDriver Instance
+        {
+            get
+            {
+                //FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
+                //service.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
+                //return new FirefoxDriver(service);
+                return new FirefoxDriver();
+            }
+        }
+
+        public DesiredCapabilities Capabilities(bool sauceLabs, bool grid, string nodePlatform)
+        {
+            var capabilities = DesiredCapabilities.Firefox();
+
+            if (sauceLabs)
+            {
+
+            }
+            if (grid)
+            {
+                if (nodePlatform == "windows")
+                {
+                    capabilities.SetCapability("marionette", true);
+                }
+            }
+            return capabilities;
+        }
+    }
+}

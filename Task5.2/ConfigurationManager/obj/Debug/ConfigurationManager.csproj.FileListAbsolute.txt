@@ -1,0 +1,4 @@
+D:\GitHub\CDPTasks\Task5.1\ConfigurationManager\bin\Debug\ConfigurationManager.dll
+D:\GitHub\CDPTasks\Task5.1\ConfigurationManager\bin\Debug\ConfigurationManager.pdb
+D:\GitHub\CDPTasks\Task5.1\ConfigurationManager\obj\Debug\ConfigurationManager.dll
+D:\GitHub\CDPTasks\Task5.1\ConfigurationManager\obj\Debug\ConfigurationManager.pdb
