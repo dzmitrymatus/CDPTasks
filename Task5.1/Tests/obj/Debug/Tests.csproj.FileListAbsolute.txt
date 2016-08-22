@@ -34,3 +34,5 @@ D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\ConfigurationManager.dll
 D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\ConfigurationManager.pdb
 D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\WebDriverManager.dll
 D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\WebDriverManager.pdb
+D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\Steps.dll
+D:\GitHub\CDPTasks\Task5.1\Tests\bin\Debug\Steps.pdb

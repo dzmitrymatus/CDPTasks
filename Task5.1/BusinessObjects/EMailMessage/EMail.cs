@@ -5,28 +5,29 @@ namespace BusinessObjects.EMailMessage
     public class EMail
     {
         #region Private members
+        static Lazy<EMail> instance = new Lazy<EMail>(() => new EMail());
+
         private string emailAdress;
-        private string message;
         private string subject;
+        private string message;
         #endregion
 
         #region Constructors
-        public EMail()
+        EMail()
         {
             emailAdress = "dzmitry.matus@gmail.com";
-            message = "Hello World!";
             subject = $"Test {Guid.NewGuid()}";
-        }
-
-        public EMail(string emailAdress, string message, string subject)
-        {
-            this.emailAdress = emailAdress;
-            this.message = message;
-            this.subject = subject;
+            message = "Hello World!";
         }
         #endregion
 
         #region Public fields
+        public static EMail Instance
+        {
+            get { return instance.Value; }
+        }
+        
+
         public string EMailAdress
         {
             get { return emailAdress; }
