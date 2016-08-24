@@ -1,0 +1,7 @@
+D:\GitHub\CDPTasks\Task5.3\WebDriverManager\bin\Debug\WebDriverManager.dll
+D:\GitHub\CDPTasks\Task5.3\WebDriverManager\bin\Debug\WebDriverManager.pdb
+D:\GitHub\CDPTasks\Task5.3\WebDriverManager\bin\Debug\WebDriver.dll
+D:\GitHub\CDPTasks\Task5.3\WebDriverManager\bin\Debug\WebDriver.xml
+D:\GitHub\CDPTasks\Task5.3\WebDriverManager\obj\Debug\WebDriverManager.csprojResolveAssemblyReference.cache
+D:\GitHub\CDPTasks\Task5.3\WebDriverManager\obj\Debug\WebDriverManager.dll
+D:\GitHub\CDPTasks\Task5.3\WebDriverManager\obj\Debug\WebDriverManager.pdb

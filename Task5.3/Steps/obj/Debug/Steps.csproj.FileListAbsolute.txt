@@ -1,0 +1,8 @@
+D:\GitHub\CDPTasks\Task5.3\Steps\bin\Debug\Steps.dll
+D:\GitHub\CDPTasks\Task5.3\Steps\bin\Debug\Steps.pdb
+D:\GitHub\CDPTasks\Task5.3\Steps\obj\Debug\Steps.dll
+D:\GitHub\CDPTasks\Task5.3\Steps\obj\Debug\Steps.pdb
+D:\GitHub\CDPTasks\Task5.3\Steps\bin\Debug\Steps.dll.config
+D:\GitHub\CDPTasks\Task5.3\Steps\bin\Debug\nunit.framework.dll
+D:\GitHub\CDPTasks\Task5.3\Steps\bin\Debug\TechTalk.SpecFlow.dll
+D:\GitHub\CDPTasks\Task5.3\Steps\bin\Debug\nunit.framework.xml

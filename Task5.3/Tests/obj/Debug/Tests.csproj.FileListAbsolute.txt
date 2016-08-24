@@ -1,0 +1,11 @@
+D:\GitHub\CDPTasks\Task5.3\Tests\bin\Debug\Tests.dll
+D:\GitHub\CDPTasks\Task5.3\Tests\bin\Debug\Tests.pdb
+D:\GitHub\CDPTasks\Task5.3\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+D:\GitHub\CDPTasks\Task5.3\Tests\obj\Debug\Tests.dll
+D:\GitHub\CDPTasks\Task5.3\Tests\obj\Debug\Tests.pdb
+D:\GitHub\CDPTasks\Task5.3\Tests\bin\Debug\Tests.dll.config
+D:\GitHub\CDPTasks\Task5.3\Tests\bin\Debug\nunit.framework.dll
+D:\GitHub\CDPTasks\Task5.3\Tests\bin\Debug\TechTalk.SpecFlow.dll
+D:\GitHub\CDPTasks\Task5.3\Tests\bin\Debug\nunit.framework.xml
+D:\GitHub\CDPTasks\Task5.3\Tests\bin\Debug\Steps.dll
+D:\GitHub\CDPTasks\Task5.3\Tests\bin\Debug\Steps.pdb

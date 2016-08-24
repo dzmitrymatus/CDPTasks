@@ -1,0 +1,7 @@
+D:\GitHub\CDPTasks\Task5.3\PageObjects\bin\Debug\PageObjects.dll
+D:\GitHub\CDPTasks\Task5.3\PageObjects\bin\Debug\PageObjects.pdb
+D:\GitHub\CDPTasks\Task5.3\PageObjects\obj\Debug\PageObjects.csprojResolveAssemblyReference.cache
+D:\GitHub\CDPTasks\Task5.3\PageObjects\obj\Debug\PageObjects.dll
+D:\GitHub\CDPTasks\Task5.3\PageObjects\obj\Debug\PageObjects.pdb
+D:\GitHub\CDPTasks\Task5.3\PageObjects\bin\Debug\WebDriver.dll
+D:\GitHub\CDPTasks\Task5.3\PageObjects\bin\Debug\WebDriver.xml

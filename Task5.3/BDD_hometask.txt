@@ -1,0 +1,10 @@
+BDD Hometask
+
+JAVA:	Use Cucumber-jvm
+C#:	Use Specflow
+		
+Create 5 automated tests for checking "Add to cart" feature on www.ebay.com
+At least one test should use "Scenario" keyword
+At least one test should use "Scenario Outline" keyword
+
+Tests should use Page Object pattern
