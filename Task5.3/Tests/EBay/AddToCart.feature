@@ -7,7 +7,6 @@ Scenario: Simple add to cart test
 	And I select first link in categories list
 	And I select 'Купить сейчас' checkbox in items container
 	And I click '1' item in items container
-	When I click "Add to cart" button
-	Then the successful message should be shown on the page
-	When I navigate to the cart
+	When I click Add to cart button
+	And I navigate to the cart
 	Then the cart sould be contain '1' item

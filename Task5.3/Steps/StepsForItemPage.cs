@@ -1,20 +1,18 @@
-﻿using TechTalk.SpecFlow;
+﻿using PageObjects.Pages;
+using TechTalk.SpecFlow;
+using WebDriverManager.DriverInstance;
 
 namespace Steps
 {
     [Binding]
     public class StepsForItemPage
     {
-        [When(@"I click ""(.*)"" button")]
-        public void WhenIClickButton(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
+        ItemPage page = new ItemPage(Driver.Instance);
 
-        [Then(@"the successful message should be shown on the page")]
-        public void ThenTheSuccessfulMessageShouldBeShownOnThePage()
+        [When(@"I click Add to cart button")]
+        public void WhenIClickButton()
         {
-            ScenarioContext.Current.Pending();
+            page.AddToCart();
         }
     }
 }

@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
+using PageObjects.Base;
 
 namespace PageObjects.Pages
 {
-    public class CategoryPage
+    public class CategoryPage : BasePage
     {
+        [FindsBy(How = How.ClassName, Using = "navigation-list")]
+        private IWebElement navigationList;
+
+        public CategoryPage(IWebDriver driver):base(driver) { }
+
+        public void SelectCategory(int categoryNumber)
+        {
+            navigationList.FindElements(By.TagName("li"))[categoryNumber - 1].Click();
+        }
     }
 }

@@ -1,26 +1,29 @@
-﻿using TechTalk.SpecFlow;
+﻿using PageObjects.Pages;
+using TechTalk.SpecFlow;
+using WebDriverManager.DriverInstance;
 
 namespace Steps
 {
     [Binding]
     public class StepsForHomePage
     {
+        HomePage page = new HomePage(Driver.Instance);
         [Given(@"I open www\.ebay\.com page")]
         public void GivenIOpenWww_Ebay_ComPage()
         {
-            ScenarioContext.Current.Pending();
+            page.Navigate();
         }
 
         [Given(@"I select first item in search dropdown list")]
         public void GivenISelectFirstItemInSearchDropdownList()
         {
-            ScenarioContext.Current.Pending();
+            page.SelectCategoryInHeader(1);
         }
 
         [Given(@"I click search button in the header")]
         public void GivenIClickSearchButtonInTheHeader()
         {
-            ScenarioContext.Current.Pending();
+            page.ClickSearchButtonInHeader();
         }
     }
 }

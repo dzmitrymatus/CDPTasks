@@ -1,20 +1,25 @@
-﻿using TechTalk.SpecFlow;
+﻿using NUnit.Framework;
+using PageObjects.Pages;
+using TechTalk.SpecFlow;
+using WebDriverManager.DriverInstance;
 
 namespace Steps
 {
     [Binding]
     public class StepsForCartPage
     {
+        CartPage page = new CartPage(Driver.Instance);
+
         [When(@"I navigate to the cart")]
         public void WhenINavigateToTheCart()
         {
-            ScenarioContext.Current.Pending();
+            page.Navigate();
         }
 
         [Then(@"the cart sould be contain '(.*)' item")]
         public void ThenTheCartSouldBeContainItem(int p0)
         {
-            ScenarioContext.Current.Pending();
+            Assert.That(page.GetElementsCount() == 1);
         }
     }
 }

@@ -83,12 +83,10 @@ this.ScenarioSetup(scenarioInfo);
 #line 9
  testRunner.And("I click \'1\' item in items container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.When("I click \"Add to cart\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click Add to cart button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.Then("the successful message should be shown on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I navigate to the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.When("I navigate to the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
  testRunner.Then("the cart sould be contain \'1\' item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
