@@ -8,6 +8,8 @@ namespace Steps
     public class StepsForHomePage
     {
         HomePage page = new HomePage(Driver.Instance);
+
+        [Given(@"I open home page")]
         [Given(@"I open www\.ebay\.com page")]
         public void GivenIOpenWww_Ebay_ComPage()
         {

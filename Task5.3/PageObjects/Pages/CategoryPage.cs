@@ -13,7 +13,7 @@ namespace PageObjects.Pages
 
         public void SelectCategory(int categoryNumber)
         {
-            navigationList.FindElements(By.TagName("li"))[categoryNumber - 1].Click();
+            navigationList.FindElement(By.CssSelector(".navigation-list")).FindElements(By.TagName("li"))[categoryNumber - 1].Click();
         }
     }
 }

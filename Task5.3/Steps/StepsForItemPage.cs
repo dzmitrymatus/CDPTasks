@@ -14,5 +14,12 @@ namespace Steps
         {
             page.AddToCart();
         }
+
+        [When(@"I click continue shopping button")]
+        public void WhenIBackToItemsPage()
+        {
+            page.ContinueShopping();
+        }
+
     }
 }

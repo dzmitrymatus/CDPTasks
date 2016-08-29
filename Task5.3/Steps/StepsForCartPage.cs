@@ -10,7 +10,8 @@ namespace Steps
     {
         CartPage page = new CartPage(Driver.Instance);
 
-        [When(@"I navigate to the cart")]
+        [Given(@"I navigate to the cart page")]
+        [When(@"I navigate to the cart page")]
         public void WhenINavigateToTheCart()
         {
             page.Navigate();
@@ -19,7 +20,14 @@ namespace Steps
         [Then(@"the cart sould be contain '(.*)' item")]
         public void ThenTheCartSouldBeContainItem(int p0)
         {
-            Assert.That(page.GetElementsCount() == 1);
+            Assert.That(page.GetElementsCount() == p0);
         }
+
+        [Given(@"I clear cart")]
+        public void GivenIClearCart()
+        {
+            page.ClearCart();
+        }
+
     }
 }

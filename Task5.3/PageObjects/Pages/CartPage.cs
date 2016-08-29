@@ -8,7 +8,7 @@ namespace PageObjects.Pages
     {
         private const string Url = "http://cart.payments.ebay.com/sc/view";
         
-        [FindsBy(How = How.ClassName, Using = "c-std")]
+        [FindsBy(How = How.Id, Using = "ShopCart")]
         private IWebElement elementsContainer;
 
         public CartPage(IWebDriver driver):base(driver) { }
@@ -19,8 +19,16 @@ namespace PageObjects.Pages
         }
 
         public int GetElementsCount()
+        {  
+            return elementsContainer.FindElements(By.CssSelector("div.c-std > div")).Count;
+        }
+
+        public void ClearCart()
         {
-            return elementsContainer.FindElements(By.ClassName("fl")).Count;
+            foreach(var item in elementsContainer.FindElements(By.CssSelector("div.c-std > div")))
+            {
+                item.FindElement(By.LinkText("Удалить")).Click();
+            }
         }
     }
 }

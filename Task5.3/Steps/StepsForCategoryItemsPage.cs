@@ -13,8 +13,10 @@ namespace Steps
         public void GivenISelectCheckboxInItemsContainer(string p0)
         {
             page.SelectFilterCategory(p0);
+            page.ShowLots();
         }
 
+        [When(@"I click '(.*)' item in items container")]
         [Given(@"I click '(.*)' item in items container")]
         public void GivenIClickItemInItemsContainer(int p0)
         {

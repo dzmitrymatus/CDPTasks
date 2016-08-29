@@ -63,6 +63,7 @@
     <Compile Include="StepsForCategoryPage.cs" />
     <Compile Include="StepsForHomePage.cs" />
     <Compile Include="StepsForItemPage.cs" />
+    <Compile Include="StepsForLoginPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
