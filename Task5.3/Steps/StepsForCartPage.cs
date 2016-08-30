@@ -29,5 +29,12 @@ namespace Steps
             page.ClearCart();
         }
 
+        [Then(@"the page sould be contain successful message")]
+        public void ThenThePageSouldBeContainSuccessfulMessage()
+        {
+            page.HasSuccessfulMessage();
+        }
+
+
     }
 }

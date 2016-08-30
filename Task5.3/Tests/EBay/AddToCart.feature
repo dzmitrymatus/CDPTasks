@@ -70,3 +70,14 @@ Scenario Outline: Adding two items to cart as logined user
 	Examples:
     | login					    | password   | 
     | "automation.test@mail.ru" | "502211qw-"|
+
+Scenario: Checking successful message while adding one item to cart without login
+
+	Given I open www.ebay.com page
+	And I select first item in search dropdown list
+	And I click search button in the header
+	And I select first link in categories list
+	And I select 'Купить сейчас' checkbox in items container
+	And I click '1' item in items container
+	When I click Add to cart button
+	Then the page sould be contain successful message
