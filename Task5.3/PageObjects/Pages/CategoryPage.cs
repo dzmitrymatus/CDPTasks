@@ -6,14 +6,16 @@ namespace PageObjects.Pages
 {
     public class CategoryPage : BasePage
     {
-        [FindsBy(How = How.ClassName, Using = "navigation-list")]
+        [FindsBy(How = How.CssSelector, Using = ".navigation-list .navigation-list")]
         private IWebElement navigationList;
+
+        private readonly By categorySelector = By.TagName("li");
 
         public CategoryPage(IWebDriver driver):base(driver) { }
 
         public void SelectCategory(int categoryNumber)
         {
-            navigationList.FindElement(By.CssSelector(".navigation-list")).FindElements(By.TagName("li"))[categoryNumber - 1].Click();
+            navigationList.FindElements(categorySelector)[categoryNumber - 1].Click();
         }
     }
 }

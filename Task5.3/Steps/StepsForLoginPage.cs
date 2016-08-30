@@ -20,7 +20,5 @@ namespace Steps
         {
             page.Login(p0, p1);
         }
-
-
     }
 }

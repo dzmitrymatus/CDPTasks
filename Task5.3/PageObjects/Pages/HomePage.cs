@@ -7,9 +7,8 @@ namespace PageObjects.Pages
 {
     public class HomePage : BasePage
     {
-        private const string Url = "http://www.ebay.com/";
-        
-        private string searchSelectListId = "gh-cat";
+        private const string Url = "http://www.ebay.com/";       
+        private readonly By searchSelectListSelector = By.Id("gh-cat");
 
         [FindsBy(How = How.Id, Using = "gh-btn")]
         private IWebElement searchButton;
@@ -23,7 +22,7 @@ namespace PageObjects.Pages
 
         public void SelectCategoryInHeader(int categoryNumber)
         {
-            SelectElement searchSelectList = new SelectElement(driver.FindElement(By.Id(searchSelectListId)));
+            SelectElement searchSelectList = new SelectElement(driver.FindElement(searchSelectListSelector));
             searchSelectList.SelectByIndex(categoryNumber);
         }
 

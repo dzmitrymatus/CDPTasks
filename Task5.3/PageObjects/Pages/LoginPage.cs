@@ -15,6 +15,9 @@ namespace PageObjects.Pages
         [FindsBy(How = How.Id, Using = "sgnBt")]
         private IWebElement loginButton;
 
+        private readonly By inputSelector = By.TagName("input");
+        private const string isCheckedAttributeName = "aria-checked";
+
         public LoginPage(IWebDriver driver) : base(driver) { }
 
         public void Navigate()
@@ -24,9 +27,9 @@ namespace PageObjects.Pages
 
         public void Login(string login, string password)
         {
-            loginForm.FindElements(By.TagName("input"))[1].SendKeys(login);
-            loginForm.FindElements(By.TagName("input"))[3].SendKeys(password);
-            if (stayInSystemCheckBox.GetAttribute("aria-checked") == "true")
+            loginForm.FindElements(inputSelector)[1].SendKeys(login);
+            loginForm.FindElements(inputSelector)[3].SendKeys(password);
+            if (stayInSystemCheckBox.GetAttribute(isCheckedAttributeName) == "true")
             {
                 stayInSystemCheckBox.Click();
             }
