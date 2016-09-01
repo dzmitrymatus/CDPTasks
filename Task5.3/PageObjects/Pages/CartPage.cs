@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Support.PageObjects;
 using PageObjects.Base;
 using System;
+using WebDriverManager.DriverExtensions;
 
 namespace PageObjects.Pages
 {
@@ -25,14 +26,11 @@ namespace PageObjects.Pages
 
         public int GetElementsCount()
         {
-            try
+            if (driver.isElementPresent(productSelector))
             {
                 return elementsContainer.FindElements(productSelector).Count;
             }
-            catch (Exception ex)
-            {
-                return 0;
-            }
+            return 0;
         }
 
         public void ClearCart()
@@ -46,15 +44,7 @@ namespace PageObjects.Pages
 
         public bool HasSuccessfulMessage()
         {
-            try
-            {
-                driver.FindElement(successfulMessageSelector);
-                return true;
-            }
-            catch(Exception ex)
-            {
-                return false;
-            }
+            return driver.isElementPresent(successfulMessageSelector);
         }
     }
 }
