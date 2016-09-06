@@ -1,0 +1,5 @@
+D:\GitHub\CDPTasks\Task5.4\Task3\Models\bin\Debug\Services.dll
+D:\GitHub\CDPTasks\Task5.4\Task3\Models\bin\Debug\Services.pdb
+D:\GitHub\CDPTasks\Task5.4\Task3\Models\obj\Debug\Services.csprojResolveAssemblyReference.cache
+D:\GitHub\CDPTasks\Task5.4\Task3\Models\obj\Debug\Services.dll
+D:\GitHub\CDPTasks\Task5.4\Task3\Models\obj\Debug\Services.pdb
