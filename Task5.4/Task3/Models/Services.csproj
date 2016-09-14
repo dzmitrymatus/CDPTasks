@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,9 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="thomas-bayer_com_sqlrest_PRODUCT\Models\Product.cs" />
+    <Compile Include="thomas_bayer_com_sqlrest_PRODUCT\Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="thomas-bayer_com_sqlrest_PRODUCT\Models\Products.cs" />
+    <Compile Include="thomas_bayer_com_sqlrest_PRODUCT\Models\ProductList.cs" />
+    <Compile Include="thomas_bayer_com_sqlrest_PRODUCT\Service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestSharpExtensions\RestSharpExtensions.csproj">
+      <Project>{9a514f2e-eae6-454c-9f04-3bc795df2831}</Project>
+      <Name>RestSharpExtensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

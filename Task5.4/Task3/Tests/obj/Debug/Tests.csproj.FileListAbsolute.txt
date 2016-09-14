@@ -9,3 +9,5 @@ D:\GitHub\CDPTasks\Task5.4\Task3\Tests\bin\Debug\RestSharp.xml
 D:\GitHub\CDPTasks\Task5.4\Task3\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 D:\GitHub\CDPTasks\Task5.4\Task3\Tests\obj\Debug\Tests.dll
 D:\GitHub\CDPTasks\Task5.4\Task3\Tests\obj\Debug\Tests.pdb
+D:\GitHub\CDPTasks\Task5.4\Task3\Tests\bin\Debug\RestSharpExtensions.dll
+D:\GitHub\CDPTasks\Task5.4\Task3\Tests\bin\Debug\RestSharpExtensions.pdb

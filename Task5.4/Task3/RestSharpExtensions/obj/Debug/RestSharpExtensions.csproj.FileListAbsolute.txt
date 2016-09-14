@@ -1,0 +1,7 @@
+D:\GitHub\CDPTasks\Task5.4\Task3\RestSharpExtensions\bin\Debug\RestSharpExtensions.dll
+D:\GitHub\CDPTasks\Task5.4\Task3\RestSharpExtensions\bin\Debug\RestSharpExtensions.pdb
+D:\GitHub\CDPTasks\Task5.4\Task3\RestSharpExtensions\obj\Debug\RestSharpExtensions.csprojResolveAssemblyReference.cache
+D:\GitHub\CDPTasks\Task5.4\Task3\RestSharpExtensions\obj\Debug\RestSharpExtensions.dll
+D:\GitHub\CDPTasks\Task5.4\Task3\RestSharpExtensions\obj\Debug\RestSharpExtensions.pdb
+D:\GitHub\CDPTasks\Task5.4\Task3\RestSharpExtensions\bin\Debug\RestSharp.dll
+D:\GitHub\CDPTasks\Task5.4\Task3\RestSharpExtensions\bin\Debug\RestSharp.xml

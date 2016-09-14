@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Models\Services.csproj", "{001E1FEC-2950-4E29-9D11-F44CB093BA05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpExtensions", "RestSharpExtensions\RestSharpExtensions.csproj", "{9A514F2E-EAE6-454C-9F04-3BC795DF2831}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{001E1FEC-2950-4E29-9D11-F44CB093BA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{001E1FEC-2950-4E29-9D11-F44CB093BA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{001E1FEC-2950-4E29-9D11-F44CB093BA05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A514F2E-EAE6-454C-9F04-3BC795DF2831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A514F2E-EAE6-454C-9F04-3BC795DF2831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A514F2E-EAE6-454C-9F04-3BC795DF2831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A514F2E-EAE6-454C-9F04-3BC795DF2831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

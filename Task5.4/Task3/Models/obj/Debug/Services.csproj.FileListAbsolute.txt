@@ -3,3 +3,7 @@ D:\GitHub\CDPTasks\Task5.4\Task3\Models\bin\Debug\Services.pdb
 D:\GitHub\CDPTasks\Task5.4\Task3\Models\obj\Debug\Services.csprojResolveAssemblyReference.cache
 D:\GitHub\CDPTasks\Task5.4\Task3\Models\obj\Debug\Services.dll
 D:\GitHub\CDPTasks\Task5.4\Task3\Models\obj\Debug\Services.pdb
+D:\GitHub\CDPTasks\Task5.4\Task3\Models\bin\Debug\RestSharp.dll
+D:\GitHub\CDPTasks\Task5.4\Task3\Models\bin\Debug\RestSharp.xml
+D:\GitHub\CDPTasks\Task5.4\Task3\Models\bin\Debug\RestSharpExtensions.dll
+D:\GitHub\CDPTasks\Task5.4\Task3\Models\bin\Debug\RestSharpExtensions.pdb
