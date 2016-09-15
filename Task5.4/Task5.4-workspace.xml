@@ -2,5 +2,6 @@
 <con:soapui-workspace name="Task5.4" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:project name="Task1">D:/GitHub/CDPTasks/Task5.4/Task1-soapui-project.xml</con:project>
+  <con:project name="Task2">D:/GitHub/CDPTasks/Task5.4/Task2-soapui-project.xml</con:project>
   <con:collectInfoForSupport>false</con:collectInfoForSupport>
 </con:soapui-workspace>

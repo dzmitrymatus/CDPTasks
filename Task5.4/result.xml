@@ -1,0 +1,23 @@
+TestCase [Check correct value for different ip] started at 2016-09-15 10:24:17.214
+Step 1 [Properties] OK: took 0 ms
+Step 2 [REST Request for Moscow ip] OK: took 190 ms
+TestCase [Check correct value for different ip] finished with status [FINISHED], time taken = 374
+TestCase [Check that for ip address from the same Town the responces is the same] started at 2016-09-15 10:24:17.595
+Step 1 [REST Request for  St. Petersburg ip] OK: took 184 ms
+Step 2 [Properties] OK: took 0 ms
+Step 3 [REST Request1] OK: took 179 ms
+Step 4 [Property Transfer] OK: took 0 ms
+ -> Performed transfer [city1transfer]
+Step 5 [REST Request2] OK: took 191 ms
+TestCase [Check that for ip address from the same Town the responces is the same] finished with status [FINISHED], time taken = 371
+TestCase [Check 10 error code] started at 2016-09-15 10:24:17.977
+Step 1 [Property Transfer2] OK: took 1 ms
+ -> Performed transfer [cityTransfer]
+Step 2 [Assert] OK: took 0 ms
+Step 3 [Properties] OK: took 0 ms
+TestCase [Check 10 error code] finished with status [FINISHED], time taken = 181
+Step 4 [REST Request] OK: took 181 ms
+TestCase [Check 205 error code] started at 2016-09-15 10:24:18.165
+Step 1 [Properties] OK: took 0 ms
+TestCase [Check 205 error code] finished with status [FINISHED], time taken = 190
+Step 2 [REST Request] OK: took 190 ms
